@@ -1,19 +1,23 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const ParticlesHero = ({ color = "#3b82f6" }) => {
     const [init, setInit] = useState(false);
+    const isMobile = useIsMobile();
 
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
-            setInit(true);
-        });
-    }, []);
+        if (!isMobile) {
+            initParticlesEngine(async (engine) => {
+                await loadSlim(engine);
+            }).then(() => {
+                setInit(true);
+            });
+        }
+    }, [isMobile]);
 
-    if (!init) return null;
+    if (!init || isMobile) return null;
 
     return (
         <Particles
@@ -77,7 +81,7 @@ const ParticlesHero = ({ color = "#3b82f6" }) => {
                             enable: true,
                             area: 800,
                         },
-                        value: 270, // Tripled density
+                        value: isMobile ? 50 : 270, // Optimized for mobile
                     },
                     opacity: {
                         value: { min: 0.1, max: 0.6 },

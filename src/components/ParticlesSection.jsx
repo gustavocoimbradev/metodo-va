@@ -2,11 +2,13 @@ import { useEffect, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { motion, useInView } from "framer-motion";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const ParticlesSection = ({ id, className, density = 30, color = "#3b82f6" }) => {
     const [init, setInit] = useState(false);
     const containerRef = useRef(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+    const isMobile = useIsMobile();
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -54,7 +56,7 @@ const ParticlesSection = ({ id, className, density = 30, color = "#3b82f6" }) =>
                         },
                         number: {
                             density: { enable: true, area: 900 },
-                            value: density,
+                            value: isMobile ? Math.min(density, 15) : density,
                         },
                         opacity: {
                             value: { min: 0.2, max: 0.6 },

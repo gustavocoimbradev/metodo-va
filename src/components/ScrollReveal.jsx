@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export const ScrollReveal = ({
     children,
@@ -8,6 +9,12 @@ export const ScrollReveal = ({
     className = "",
     viewport = { once: true, margin: "-50px" }
 }) => {
+    const isMobile = useIsMobile();
+
+    if (isMobile) {
+        return <div className={className}>{children}</div>;
+    }
+
 
     const variants = {
         "fade-up": {

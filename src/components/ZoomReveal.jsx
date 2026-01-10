@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export const ZoomReveal = ({ src, alt, className = "" }) => {
+    const isMobile = useIsMobile();
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
     useEffect(() => {
+        if (isMobile) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -23,7 +27,10 @@ export const ZoomReveal = ({ src, alt, className = "" }) => {
         }
 
         return () => observer.disconnect();
-    }, []);
+    }, [isMobile]);
+
+    const showImage = isVisible || isMobile;
+
 
     return (
         <div className={`overflow-hidden w-full h-full bg-blue-950`}>
@@ -31,7 +38,7 @@ export const ZoomReveal = ({ src, alt, className = "" }) => {
                 ref={ref}
                 src={src}
                 alt={alt}
-                className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-out will-change-transform ${isVisible ? 'scale-100 origin-center' : 'scale-[1.08] origin-center'
+                className={`w-full h-full object-cover ${!isMobile ? 'transition-transform duration-[8000ms] ease-out will-change-transform' : ''} ${showImage ? 'scale-100 origin-center' : 'scale-[1.08] origin-center'
                     } ${className}`}
             />
         </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useIsMobile } from "../hooks/useIsMobile"
 
 export const BlurReveal = ({
     children,
@@ -6,6 +7,12 @@ export const BlurReveal = ({
     duration = 0.8,
     className = ""
 }) => {
+    const isMobile = useIsMobile()
+
+    if (isMobile) {
+        return <div className={className}>{children}</div>
+    }
+
     const text = String(children)
     const words = text.split(" ")
 
