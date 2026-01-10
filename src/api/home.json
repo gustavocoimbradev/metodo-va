@@ -1,0 +1,165 @@
+{
+    "hero": {
+        "badge": "Método V&A",
+        "title": {
+            "prefix": "Da Advocacia de Excelência à",
+            "highlight": "Transformação de Carreiras"
+        },
+        "description": "Descubra como dois advogados transformaram um sonho em um império jurídico — e agora estão prontos para compartilhar cada segredo do sucesso com você.",
+        "buttons": {
+            "primary": "Conheça as Mentorias",
+            "secondary": "Como Funciona"
+        }
+    },
+    "vision": {
+        "image": "/img/jovana.e.tulio-63_1_-683x1024.webp",
+        "image_caption": {
+            "title": "Túlio Viana & Jovana Arantes",
+            "subtitle": "Fundadores da Viana & Arantes"
+        },
+        "title": {
+            "prefix": "A Visão por Trás do",
+            "highlight": "Método V&A"
+        },
+        "descriptions": [
+            "Com mais de uma década de dedicação e inovação, <strong>Túlio Viana</strong> e <strong>Jovana Arantes</strong> não apenas construíram um dos escritórios de advocacia trabalhista mais respeitados do Brasil, o Viana & Arantes, mas também desenvolveram uma metodologia comprovada para o sucesso.",
+            "\"Sua paixão por descomplicar o sucesso jurídico os levou a criar uma abordagem única, combinando estratégia arrojada, trabalho inteligente e processos operacionais de alto nível.\""
+        ],
+        "stats": [
+            {
+                "value": 1500,
+                "suffix": "+",
+                "label": "Processos Ativos"
+            },
+            {
+                "value": 1,
+                "suffix": "M+",
+                "label": "Faturamento Real"
+            }
+        ]
+    },
+    "mentors": {
+        "badge": "Autoridade Comprovada",
+        "title": "Conheça Seus Mentores de Sucesso",
+        "tulio": {
+            "image": "/img/img127.jpg",
+            "name": {
+                "first": "Túlio",
+                "last": "Viana"
+            },
+            "role": "Especialista em IA e Direito do Trabalho",
+            "bio": "Túlio é pioneiro na aplicação de IA na advocacia brasileira. Ele revolucionou a forma como o escritório produz conteúdo, atende clientes e escala resultados — tudo com inteligência artificial.",
+            "quote": "\"Ensino advogados a <span class=\"text-blue-400 font-bold uppercase\">rodarem seus escritórios 100% em IA</span>, multiplicando produtividade sem perder qualidade.\""
+        },
+        "jovana": {
+            "image": "/img/img128.jpg",
+            "name": {
+                "first": "Jovana",
+                "last": "Arantes"
+            },
+            "role": "Gestora e Especialista em Direito do Trabalho",
+            "bio": "Jovana é a mente por trás da organização impecável do escritório Viana & Arantes. Especialista em transformar caos em sistemas eficientes, ela domina a arte de gerenciar equipes, processos e indicadores de lucro.",
+            "quote": "\"Ensinamos advogados a <span class=\"text-indigo-400 font-bold uppercase\">estruturarem seus escritórios como empresas</span> de alto desempenho e crescimento previsível.\""
+        }
+    },
+    "two_mentorships": {
+        "card_ia": {
+            "title": "IA &\nTecnologia",
+            "subtitle": "Inovação que escala resultados."
+        },
+        "card_gestao": {
+            "title": "Gestão\nTotal",
+            "subtitle": "Controle total da sua operação."
+        },
+        "badge": "Mentorias Especializadas",
+        "title": {
+            "main": "Duas Mentorias.",
+            "highlight": "Uma Transformação Completa."
+        },
+        "description": "O <span class=\"font-bold text-white\">Método V&A</span> oferece duas mentorias complementares. Juntas, elas cobrem tudo o que você precisa para construir um escritório de advocacia de alto desempenho e sustentável.",
+        "highlight_box": "Você pode escolher a mentoria que mais se alinha às suas necessidades atuais — ou investir em ambas para uma transformação acelerada de seu escritório."
+    },
+    "audience": {
+        "title": {
+            "main": "Para quem o",
+            "highlight": "Método V&A",
+            "suffix": "funciona melhor?"
+        },
+        "subtitle": "Identifique se este ecossistema é o próximo passo para o crescimento do seu escritório.",
+        "ideal_profile": {
+            "badge": "O Perfil Ideal",
+            "title": "Para quem quer...",
+            "items": [
+                "Ter a melhor gestão de escritório do Brasil",
+                "Crescer com <strong>previsibilidade</strong> e lucro real",
+                "Organizar rotina, time e atendimento com padrão",
+                "Usar IA para ganhar produtividade com qualidade"
+            ]
+        },
+        "contra_indication": {
+            "badge": "Contra-Indicação",
+            "title": "Não é para quem...",
+            "items": [
+                "Quer \"atalho mágico\" sem estruturar base",
+                "Não quer testar e sustentar novas rotinas",
+                "Procura apenas motivação sem método científico",
+                "Acredita que o sucesso vem antes do processo"
+            ]
+        }
+    },
+    "history": {
+        "title": "A Decisão que Mudou \n Nosso Destino",
+        "paragraphs": [
+            "Após consolidarem seu império jurídico, Túlio e Jovana se depararam com uma pergunta transformadora: <span class=\"italic text-white\">\"E se pudéssemos ensinar outros advogados a alcançar o mesmo nível de sucesso?\"</span>",
+            "Foi assim que nasceu o <strong class=\"text-white\">Método V&A</strong> — uma empresa dedicada exclusivamente a transformar escritórios comuns em operações milionárias. Não se trata de teoria. É sobre <span class=\"bg-blue-900/30 text-blue-200 px-1 font-semibold\">estratégias reais e processos testados</span> no campo de batalha."
+        ],
+        "quote": "\"Decidimos compartilhar cada aprendizado e cada vitória conquistada. Nossa missão agora é elevar o padrão de cada advogado que entra em nosso ecossistema.\"",
+        "image_caption": {
+            "title": "Transformação Total",
+            "subtitle": "Do operacional ao estratégico com método."
+        }
+    },
+    "mentorships_cta": {
+        "title": "Nossas Mentorias",
+        "subtitle": "Escolha o pilar de crescimento que você deseja dominar agora.",
+        "card_tulio": {
+            "badge": "Tecnologia & Escala",
+            "title": "IA para Advocacia",
+            "subtitle": "com Túlio Viana",
+            "description": "Uso prático de IA para produzir mais, com mais qualidade e consistência — sem perder segurança e método.",
+            "benefits": [
+                "Redução de custos (80%)",
+                "Automação de Contratos",
+                "Produtividade 10x maior",
+                "Petições com IA"
+            ],
+            "button": "Saiba Mais",
+            "link": "/mentoria/inteligencia-artificial"
+        },
+        "card_jovana": {
+            "badge": "Gestão & Pessoas",
+            "title": "Gestão de Escritório",
+            "subtitle": "com Jovana Arantes",
+            "description": "Transforme seu escritório em uma operação previsível e lucrativa com processos e indicadores reais.",
+            "benefits": [
+                "Processos de Atendimento",
+                "Financeiro & Lucro",
+                "Gestão de Equipe",
+                "Crescimento Previsível"
+            ],
+            "button": "Saiba Mais",
+            "link": "/mentoria/gestao-de-escritorio"
+        }
+    },
+    "footer": {
+        "title": "Sua Transformação \n Começa Agora",
+        "description": "Você está a uma decisão de distância de transformar completamente sua carreira jurídica e multiplicar seus resultados com o Método V&A.",
+        "buttons": {
+            "primary": "Escolher Minha Mentoria",
+            "secondary": "Falar com Consultor"
+        },
+        "copyright": "© 2024 Método V&A. Todos os direitos reservados.",
+        "developer_text": "Feito com 💙 por",
+        "developer_link": "Insiderblue"
+    }
+}

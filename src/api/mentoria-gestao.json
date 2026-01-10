@@ -1,0 +1,198 @@
+{
+    "hero": {
+        "badge": "Gestão de Escritório",
+        "header": "Método V&A • Com Jovana Arantes",
+        "title": {
+            "prefix": "Tenha um Escritório",
+            "highlight": "Previsível e Lucrativo"
+        },
+        "description": "Chega de viver apagando incêndios. Aprenda a construir uma máquina de crescimento — com processos claros, equipe alinhada e resultados consistentes mês após mês.",
+        "buttons": {
+            "primary": "Quero Me Inscrever",
+            "secondary": "Falar com Jovana"
+        }
+    },
+    "mentor": {
+        "badge": "Sua Mentora",
+        "name": "Jovana Arantes",
+        "role": "Gestora e Especialista em Direito do Trabalho",
+        "description": "Gestora responsável pela organização do escritório Viana & Arantes. Especialista em transformar o caos em sistemas eficientes, com domínio prático em gestão de equipes, processos e indicadores.",
+        "quote": "\"Minha mentoria ensina advogados a estruturarem seus escritórios como verdadeiras empresas de alto desempenho — com rotinas claras, padrões de excelência e crescimento previsível.\"",
+        "tags": [
+            "Gestão & Especialista Laboral",
+            "Organização Premium"
+        ]
+    },
+    "mastery": {
+        "badge": "Conhecimento Prático",
+        "title": {
+            "prefix": "O Que Você Vai",
+            "highlight": "Dominar"
+        },
+        "description": "Uma transformação completa de carreira para levar seu escritório ao próximo nível através de método, trabalho e determinação.",
+        "quote_box": "\"Esta mentoria transforma escritórios 'apertados' e desorganizados em operações empresariais de verdade — prontas para escalar.\"",
+        "cards": [
+            {
+                "title": "Processos e Padrão de Atendimento",
+                "description": "Crie sistemas que funcionam mesmo sem você, garantindo qualidade em cada interação.",
+                "items": [
+                    "Mapeamento de jornada do cliente",
+                    "Padrão de atendimento premium",
+                    "Rotinas operacionais claras",
+                    "Segurança jurídica nos prazos"
+                ]
+            },
+            {
+                "title": "Rotina de Gestão e Indicadores",
+                "description": "Aprenda a ler os números do seu escritório e tomar decisões baseadas em dados reais.",
+                "items": [
+                    "Controle de fluxo de caixa",
+                    "Precificação estratégica",
+                    "Gestão tributária e impostas",
+                    "Painel de indicadores gerenciais"
+                ]
+            },
+            {
+                "title": "Organização de Equipe e Funções",
+                "description": "Monte um time de alta performance com papéis claros e responsabilidades definidas.",
+                "items": [
+                    "Contratação de associados",
+                    "Integração de novos colaboradores",
+                    "Definição de cargos e funções (KPIs)",
+                    "Cultura de responsabilidade"
+                ]
+            },
+            {
+                "title": "Crescimento com Previsibilidade",
+                "description": "Expanda seu escritório de forma estruturada, sustentável e lucrativa.",
+                "items": [
+                    "Controller jurídico e sistemas",
+                    "Escala sem perda de qualidade",
+                    "Gargalos ocultos na operação",
+                    "Visão estratégica do negócio"
+                ]
+            }
+        ]
+    },
+    "audience": {
+        "badge": "Para Quem é Esta Mentoria",
+        "title": {
+            "prefix": "Esta Mentoria é Para",
+            "highlight": "Você Se:"
+        },
+        "target_cards": [
+            {
+                "title": "Quer faturamento milionário",
+                "description": "Sem mágica, sem atalhos — apenas trabalho estruturado e execução impecável com o Método V&A."
+            },
+            {
+                "title": "Busca crescer com previsibilidade",
+                "description": "Escritórios que desejam expandir de forma organizada, sustentável e com resultados mensuráveis."
+            },
+            {
+                "title": "Quer organização total",
+                "description": "Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência."
+            },
+            {
+                "title": "Deseja produtividade real",
+                "description": "Implementar um sistema concreto e aplicável que libere o sócio para focar no que realmente importa."
+            }
+        ],
+        "not_for_you": {
+            "title": "Atenção: Essa mentoria não é para você, se:",
+            "subtitle": "Seja honesto consigo mesmo antes de seguir em frente.",
+            "warning": "O Método V&A é para advogados sérios, comprometidos e determinados a transformar suas carreiras.",
+            "cards": [
+                {
+                    "title": "Busca \"atalho mágico\"",
+                    "description": "Se acredita em fórmulas milagrosas que prometem resultados sem esforço, esta mentoria não é para você."
+                },
+                {
+                    "title": "Não quer implementar",
+                    "description": "Nosso método funciona apenas para quem está disposto a implementar, testar, ajustar e persistir."
+                },
+                {
+                    "title": "Quer apenas teoria",
+                    "description": "Se procura conteúdo genérico e superficial, há opções mais baratas. Nossa mentoria é prática e profunda."
+                },
+                {
+                    "title": "Sucesso antes do trabalho",
+                    "description": "No dicionário sucesso vem antes de trabalho. Na vida real, é exatamente o oposto."
+                }
+            ]
+        }
+    },
+    "results": {
+        "badge": "Autoridade Comprovada",
+        "title": {
+            "prefix": "Escritório Viana & Arantes",
+            "highlight": "Resultados de Elite"
+        },
+        "description": "Saímos do zero para nos consolidar como referência nacional. Nossa operação milionária é a prova viva de que o método funciona.",
+        "highlights": [
+            {
+                "title": "Faturamento Milionário",
+                "description": "Operação de alto desempenho com faturamento real e lucro líquido consistente."
+            },
+            {
+                "title": "Estrutura Própria",
+                "description": "Mais de 15 colaboradores e sede própria gerenciada com excelência."
+            }
+        ],
+        "stats": [
+            {
+                "value": 1500,
+                "label": "Processos Judiciais",
+                "suffix": "+"
+            },
+            {
+                "value": 700,
+                "label": "5 estrelas no Google",
+                "suffix": "+"
+            },
+            {
+                "value": 15,
+                "label": "Colaboradores",
+                "suffix": "+"
+            },
+            {
+                "value": "∞",
+                "label": "Crescimento Previsível",
+                "suffix": ""
+            }
+        ]
+    },
+    "final_cta": {
+        "badge": "Inscrições Abertas",
+        "title": {
+            "prefix": "Assuma o Controle",
+            "highlight": "Empresarial do seu Escritório"
+        },
+        "offer": {
+            "expires_label": "Esta oferta expira em:",
+            "old_price": "R$ 5.997,00",
+            "discount_badge": "33% OFF",
+            "price": "R$ 3.997",
+            "cents": ",00",
+            "installments": "ou em até 12x de",
+            "installment_value": "R$ 399,08",
+            "secure_label": "🔒 Pagamento 100% seguro • Garantia de 7 dias"
+        },
+        "testimonial": {
+            "text": "\"Eu sou a prova de que a gestão transforma destinos. O Método V&A não entrega motivação, entrega estrutura para quem quer construir algo extraordinário.\"",
+            "author": "— Jovana Arantes"
+        },
+        "buttons": {
+            "primary": "Garantir Minha Vaga Agora",
+            "secondary": "Falar com um Especialista"
+        },
+        "links": {
+            "checkout": "https://pay.hotmart.com/jovana-mentoria"
+        }
+    },
+    "footer": {
+        "copyright": "© 2024 Método V&A. Todos os direitos reservados.",
+        "developer_text": "Feito com 💜 por",
+        "developer_link": "Insiderblue"
+    }
+}
