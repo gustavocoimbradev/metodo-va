@@ -15,7 +15,7 @@ const Footer = ({ accentColor = "blue" }) => {
     return (
         <footer className="relative py-12 border-t border-white/5 bg-[#020617]">
             <Container>
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-xs font-bold uppercase tracking-widest">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-xs font-bold uppercase tracking-widest text-center md:text-left">
                     <p>© {currentYear} Método V&A. Todos os direitos reservados.</p>
                     <p>
                         Feito com {heartEmoji} por <a href="https://www.insiderblue.com.br" target="_blank" rel="noopener noreferrer" className={`${linkColorClass} transition-colors`}>Insiderblue</a>
