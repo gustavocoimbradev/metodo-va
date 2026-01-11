@@ -12,6 +12,7 @@ import { ZoomReveal } from './components/ZoomReveal'
 import Preloader from './components/Preloader'
 import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
+import Footer from './components/Footer'
 import content from './api/home.json'
 
 // --- Components ---
@@ -602,7 +603,7 @@ function App() {
         </Section>
 
         {/* Final CTA */}
-        <footer className="py-24 bg-[#020617] border-t border-white/5 relative overflow-hidden">
+        <section className="py-24 bg-[#020617] border-t border-white/5 relative overflow-hidden">
           <div className="absolute inset-0 bg-blue-600/5 blur-[120px] pointer-events-none" />
           <Container className="relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -626,14 +627,10 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="mt-24 pt-10 border-t border-white/5 w-full">
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-sm">
-                <p>{content.footer.copyright.replace('2024', new Date().getFullYear())}</p>
-                <p>{content.footer.developer_text} <a href="https://www.insiderblue.com.br" target="_blank" className="text-blue-500 hover:text-blue-400">{content.footer.developer_link}</a></p>
-              </div>
-            </div>
           </Container>
-        </footer>
+        </section>
+
+        <Footer accentColor="blue" />
       </main>
     </div>
   )

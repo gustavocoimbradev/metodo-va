@@ -15,6 +15,7 @@ import Container from './components/Container'
 import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
 import { CountUp } from './components/CountUp'
+import Footer from './components/Footer'
 import content from './api/mentoria-gestao.json'
 
 // --- Components ---
@@ -575,14 +576,7 @@ function MentoriaJovana() {
                 </Section>
 
                 {/* ========== FOOTER ========== */}
-                <footer className="relative py-12 border-t border-white/5">
-                    <Container>
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-xs font-bold uppercase tracking-widest">
-                            <p>{content.footer.copyright.replace('2024', new Date().getFullYear())}</p>
-                            <p>{content.footer.developer_text} <a href="https://www.insiderblue.com.br" target="_blank" rel="noopener noreferrer" className="text-purple-500/50 hover:text-purple-400 transition-colors">{content.footer.developer_link}</a></p>
-                        </div>
-                    </Container>
-                </footer>
+                <Footer accentColor="purple" />
 
             </main>
         </div>

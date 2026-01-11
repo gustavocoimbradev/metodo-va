@@ -15,6 +15,7 @@ import Container from './components/Container'
 import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
 import { CountUp } from './components/CountUp'
+import Footer from './components/Footer'
 
 // --- Components ---
 
@@ -561,14 +562,7 @@ function MentoriaIA() {
                 </Section>
 
                 {/* ========== FOOTER ========== */}
-                <footer className="relative py-12 border-t border-white/5">
-                    <Container>
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-xs font-bold uppercase tracking-widest">
-                            <p>© {new Date().getFullYear()} Método V&A. Todos os direitos reservados.</p>
-                            <p>Feito com 💙 por <a href="https://www.insiderblue.com.br" target="_blank" rel="noopener noreferrer" className="text-cyan-500/50 hover:text-cyan-400 transition-colors">Insiderblue</a></p>
-                        </div>
-                    </Container>
-                </footer>
+                <Footer accentColor="cyan" />
 
             </main>
         </div>
