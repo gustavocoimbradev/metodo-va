@@ -158,8 +158,8 @@ function App() {
           <Container className="relative z-20 h-screen flex flex-col justify-center pointer-events-none">
             <div className="space-y-6 md:space-y-8 max-w-[650px] relative z-30 pointer-events-auto text-left px-4 md:px-0">
               <motion.div
-                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
-                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="inline-block"
               >
@@ -173,8 +173,8 @@ function App() {
                   {content.hero.title.prefix}
                 </BlurReveal>
                 <motion.span
-                  initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
-                  animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
+                  initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                  animate={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ delay: 1.5, duration: 1 }}
                   className="bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text w-fit pb-2"
                 >
@@ -189,8 +189,8 @@ function App() {
               </p>
 
               <motion.div
-                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                 transition={{ delay: 2.5, duration: 0.8 }}
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
@@ -211,18 +211,18 @@ function App() {
                 className="relative h-full w-auto right-[-5%] lg:right-[-2%] z-10 flex items-end"
               >
                 <img
-                  src="/img/hero-persona.png"
+                  src="/img/hero-persona.webp"
                   alt="Túlio Viana e Jovana Arantes"
                   className="h-full w-auto object-contain object-bottom drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] contrast-[1] brightness-[.9] saturate-[1.1]"
                 />
                 <div
                   className="absolute inset-0 w-full h-full bg-blue-600/15 mix-blend-color pointer-events-none"
                   style={{
-                    maskImage: 'url(/img/hero-persona.png)',
+                    maskImage: 'url(/img/hero-persona.webp)',
                     maskSize: 'contain',
                     maskRepeat: 'no-repeat',
                     maskPosition: 'bottom',
-                    WebkitMaskImage: 'url(/img/hero-persona.png)',
+                    WebkitMaskImage: 'url(/img/hero-persona.webp)',
                     WebkitMaskSize: 'contain',
                     WebkitMaskRepeat: 'no-repeat',
                     WebkitMaskPosition: 'bottom'
@@ -610,7 +610,7 @@ function App() {
           <Container className="relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[700px]">
-                <img src="/img/img344.jpg" alt="Transformação" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000" />
+                <img src="/img/img344.webp" alt="Transformação" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000" />
               </div>
               <div className="space-y-8 text-left">
                 <ScrollReveal animation="blur-up">

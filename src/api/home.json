@@ -42,7 +42,7 @@
         "badge": "Autoridade Comprovada",
         "title": "Conheça Seus Mentores de Sucesso",
         "tulio": {
-            "image": "/img/img127.jpg",
+            "image": "/img/img127.webp",
             "name": {
                 "first": "Túlio",
                 "last": "Viana"
@@ -52,7 +52,7 @@
             "quote": "\"Ensino advogados a <span class=\"text-blue-400 font-bold uppercase\">rodarem seus escritórios 100% em IA</span>, multiplicando produtividade sem perder qualidade.\""
         },
         "jovana": {
-            "image": "/img/img128.jpg",
+            "image": "/img/img128.webp",
             "name": {
                 "first": "Jovana",
                 "last": "Arantes"

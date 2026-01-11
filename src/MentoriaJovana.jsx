@@ -242,7 +242,7 @@ function MentoriaJovana() {
 
             <FloatingChatWidget
                 mentorName="Jovana Arantes"
-                mentorImage="/img/img128.jpg"
+                mentorImage="/img/img128.webp"
                 customMessages={JOVANA_MENTORSHIP_MESSAGES}
                 themeColor="purple"
             />
@@ -273,8 +273,8 @@ function MentoriaJovana() {
 
                             {/* Badge */}
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20"
                             >
@@ -283,8 +283,8 @@ function MentoriaJovana() {
                             </motion.div>
 
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="text-lg md:text-xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent">
@@ -297,8 +297,8 @@ function MentoriaJovana() {
                                     {content.hero.title.prefix}
                                 </BlurReveal>
                                 <motion.span
-                                    initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
-                                    animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
+                                    initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                                    animate={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 1, y: 0, filter: "blur(0px)" }}
                                     transition={{ delay: 1.2, duration: 1 }}
                                     className="bg-gradient-to-r from-purple-400 to-violet-400 text-transparent bg-clip-text block mt-2"
                                 >
@@ -314,8 +314,8 @@ function MentoriaJovana() {
                             </p>
 
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={{ delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >
@@ -338,7 +338,7 @@ function MentoriaJovana() {
                             <div className="relative">
                                 <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                                     <img
-                                        src="/img/img128.jpg"
+                                        src="/img/img128.webp"
                                         alt="Jovana Arantes"
                                         className="w-full h-full object-cover object-top"
                                     />

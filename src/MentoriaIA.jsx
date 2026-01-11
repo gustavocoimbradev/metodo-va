@@ -241,7 +241,7 @@ function MentoriaIA() {
 
             <FloatingChatWidget
                 mentorName="Túlio Viana"
-                mentorImage="/img/tulio-profile.jpg"
+                mentorImage="/img/tulio-profile.webp"
                 customMessages={AI_MENTORSHIP_MESSAGES}
                 themeColor="blue"
             />
@@ -272,7 +272,7 @@ function MentoriaIA() {
 
                             {/* Badge */}
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                                 animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20"
@@ -282,7 +282,7 @@ function MentoriaIA() {
                             </motion.div>
 
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                                 animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
@@ -296,7 +296,7 @@ function MentoriaIA() {
                                     Impulsione seu Escritório
                                 </BlurReveal>
                                 <motion.span
-                                    initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                                    initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
                                     animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                                     transition={{ delay: 1.2, duration: 1 }}
                                     className="bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text block mt-2"
@@ -313,7 +313,7 @@ function MentoriaIA() {
                             </p>
 
                             <motion.div
-                                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+                                initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
