@@ -213,10 +213,10 @@ export default function HomePage() {
                                 <img
                                     src="/img/hero-persona.webp"
                                     alt="Túlio Viana e Jovana Arantes"
-                                    className="h-full w-auto object-contain object-bottom drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] contrast-[1] brightness-[.9] saturate-[1.1]"
+                                    className="h-full w-auto object-contain object-bottom drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] contrast-[1] brightness-[.8] saturate-[1.1]"
                                 />
                                 <div
-                                    className="absolute inset-0 w-full h-full bg-blue-600/15 mix-blend-color pointer-events-none"
+                                    className="absolute inset-0 w-full h-full bg-blue-600/10 mix-blend-color pointer-events-none"
                                     style={{
                                         maskImage: 'url(/img/hero-persona.webp)',
                                         maskSize: 'contain',
