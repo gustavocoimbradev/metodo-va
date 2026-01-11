@@ -16,6 +16,7 @@ import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
 import { CountUp } from './components/CountUp'
 import Footer from './components/Footer'
+import { useIsMobile } from './hooks/useIsMobile'
 
 // --- Components ---
 
@@ -171,6 +172,7 @@ const CountdownTimer = () => {
 // --- Main Page ---
 
 function MentoriaIA() {
+    const isMobile = useIsMobile()
     const { scrollYProgress } = useScroll()
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -219,7 +221,7 @@ function MentoriaIA() {
     const targetAudience = [
         { icon: Landmark, title: 'Quer faturamento milionário', description: 'Sem mágica, sem atalhos — apenas trabalho estruturado e execução impecável com o Método V&A.', isPositive: true },
         { icon: TrendingUp, title: 'Busca crescer com previsibilidade', description: 'Escritórios que desejam expandir de forma organizada, sustentável e com resultados mensuráveis.', isPositive: true },
-        { icon: BarChart3, title: 'Quer organization total', description: 'Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência.', isPositive: true },
+        { icon: BarChart3, title: 'Quer organização total', description: 'Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência.', isPositive: true },
         { icon: Brain, title: 'Deseja produtividade com IA', description: 'Usar inteligência artificial para ganhar tempo, produzir 10x mais e manter padrão de qualidade elevado.', isPositive: true },
     ]
 
@@ -270,8 +272,8 @@ function MentoriaIA() {
 
                             {/* Badge */}
                             <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20"
                             >
@@ -280,8 +282,8 @@ function MentoriaIA() {
                             </motion.div>
 
                             <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="text-lg md:text-xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent">
@@ -294,8 +296,8 @@ function MentoriaIA() {
                                     Impulsione seu Escritório
                                 </BlurReveal>
                                 <motion.span
-                                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                    initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                                    animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                                     transition={{ delay: 1.2, duration: 1 }}
                                     className="bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text block mt-2"
                                 >
@@ -311,8 +313,8 @@ function MentoriaIA() {
                             </p>
 
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >
@@ -360,7 +362,7 @@ function MentoriaIA() {
                                     Túlio é pioneiro na aplicação de IA na advocacia brasileira. Ele revolucionou a forma como o escritório produz conteúdo, atende clientes e escala resultados — tudo com inteligência artificial.
                                 </p>
                                 <p className="text-slate-300 leading-relaxed italic border-l-4 border-cyan-500 pl-6">
-                                    "Minha mentoria ensina advogados a rodarem seus escritórios 100% em IA, multiplicando produtividade sem perder qualidade, segurança ou personalização no atendimento."
+                                    &quot;Minha mentoria ensina advogados a rodarem seus escritórios 100% em IA, multiplicando produtividade sem perder qualidade, segurança ou personalização no atendimento.&quot;
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
                                     <div className="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-widest text-xs">
@@ -404,7 +406,7 @@ function MentoriaIA() {
                     <ScrollReveal animation="fade-up" className="mt-12">
                         <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-950/30 to-blue-950/30 border border-cyan-500/10">
                             <p className="text-lg text-slate-300 leading-relaxed font-light">
-                                "Esta mentoria leva seu escritório para a era da inteligência artificial — onde produtividade e qualidade não são mais trade-offs."
+                                &quot;Esta mentoria leva seu escritório para a era da inteligência artificial — onde produtividade e qualidade não são mais trade-offs.&quot;
                             </p>
                         </div>
                     </ScrollReveal>
@@ -535,7 +537,7 @@ function MentoriaIA() {
 
                                 <blockquote className="border-l-4 border-cyan-600 pl-6 py-4 text-left bg-cyan-950/10 rounded-r-xl mb-8 max-w-2xl mx-auto">
                                     <p className="text-slate-200 italic text-lg mb-2 font-light leading-relaxed">
-                                        "IA Jurídica reduz custos em até 80% e aumenta a produtividade em até 10 vezes. O Método V&A é estratégia comprovada por quem já construiu o sucesso."
+                                        &quot;IA Jurídica reduz custos em até 80% e aumenta a produtividade em até 10 vezes. O Método V&A é estratégia comprovada por quem já construiu o sucesso.&quot;
                                     </p>
                                     <footer className="text-cyan-400 font-bold uppercase tracking-widest text-xs">— Túlio Viana</footer>
                                 </blockquote>

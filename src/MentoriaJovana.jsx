@@ -17,6 +17,7 @@ import BackgroundIcons from './components/BackgroundIcons'
 import { CountUp } from './components/CountUp'
 import Footer from './components/Footer'
 import content from './api/mentoria-gestao.json'
+import { useIsMobile } from './hooks/useIsMobile'
 
 // --- Components ---
 
@@ -172,6 +173,7 @@ const CountdownTimer = () => {
 // --- Main Page ---
 
 function MentoriaJovana() {
+    const isMobile = useIsMobile()
     const { scrollYProgress } = useScroll()
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -271,8 +273,8 @@ function MentoriaJovana() {
 
                             {/* Badge */}
                             <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20"
                             >
@@ -281,8 +283,8 @@ function MentoriaJovana() {
                             </motion.div>
 
                             <motion.div
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="text-lg md:text-xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent">
@@ -295,8 +297,8 @@ function MentoriaJovana() {
                                     {content.hero.title.prefix}
                                 </BlurReveal>
                                 <motion.span
-                                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                    initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                                    animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                                     transition={{ delay: 1.2, duration: 1 }}
                                     className="bg-gradient-to-r from-purple-400 to-violet-400 text-transparent bg-clip-text block mt-2"
                                 >
@@ -312,8 +314,8 @@ function MentoriaJovana() {
                             </p>
 
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                                 transition={{ delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >

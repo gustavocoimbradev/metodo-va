@@ -14,6 +14,7 @@ import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
 import Footer from './components/Footer'
 import content from './api/home.json'
+import { useIsMobile } from './hooks/useIsMobile'
 
 // --- Components ---
 
@@ -80,6 +81,7 @@ const CheckItem = ({ children, dotColor = "bg-cyan-500" }) => (
 // --- Main App ---
 
 function App() {
+  const isMobile = useIsMobile();
   const [loading, setLoading] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -156,8 +158,8 @@ function App() {
           <Container className="relative z-20 h-screen flex flex-col justify-center pointer-events-none">
             <div className="space-y-6 md:space-y-8 max-w-[650px] relative z-30 pointer-events-auto text-left px-4 md:px-0">
               <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="inline-block"
               >
@@ -171,8 +173,8 @@ function App() {
                   {content.hero.title.prefix}
                 </BlurReveal>
                 <motion.span
-                  initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  initial={isMobile ? undefined : { opacity: 0, y: 20, filter: "blur(10px)" }}
+                  animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ delay: 1.5, duration: 1 }}
                   className="bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text w-fit pb-2"
                 >
@@ -187,8 +189,8 @@ function App() {
               </p>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
                 transition={{ delay: 2.5, duration: 0.8 }}
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
@@ -203,8 +205,8 @@ function App() {
 
             <div className="absolute bottom-0 right-0 h-[90vh] lg:h-[105vh] w-full lg:w-[65%] items-end justify-end pointer-events-none hidden md:flex">
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, x: 100 }}
+                animate={isMobile ? undefined : { opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="relative h-full w-auto right-[-5%] lg:right-[-2%] z-10 flex items-end"
               >
@@ -231,8 +233,8 @@ function App() {
 
             <motion.a
               href="#visao"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={isMobile ? undefined : { opacity: 0, y: -20 }}
+              animate={isMobile ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 3, duration: 1 }}
               className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 text-slate-400 hover:text-white transition-colors cursor-pointer animate-bounce"
             >
