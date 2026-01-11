@@ -275,7 +275,7 @@ function MentoriaJovana() {
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                                 animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
+                                transition={isMobile ? { duration: 0 } : { duration: 0.8 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20"
                             >
                                 <Award className="w-4 h-4 text-purple-400" />
@@ -285,7 +285,7 @@ function MentoriaJovana() {
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                                 animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
+                                transition={isMobile ? { duration: 0 } : { duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="text-lg md:text-xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent">
                                     {content.hero.header}
@@ -299,7 +299,7 @@ function MentoriaJovana() {
                                 <motion.span
                                     initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
                                     animate={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                                    transition={{ delay: 1.2, duration: 1 }}
+                                    transition={isMobile ? { duration: 0 } : { delay: 1.2, duration: 1 }}
                                     className="bg-gradient-to-r from-purple-400 to-violet-400 text-transparent bg-clip-text block mt-2"
                                 >
                                     {content.hero.title.highlight}
@@ -316,7 +316,7 @@ function MentoriaJovana() {
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                                transition={{ delay: 2, duration: 0.8 }}
+                                transition={isMobile ? { duration: 0 } : { delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >
                                 <PrimaryButton onClick={() => scrollToSection('inscricao')} icon variant="purple">

@@ -160,7 +160,7 @@ function App() {
               <motion.div
                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                 animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={isMobile ? { duration: 0 } : { duration: 0.8 }}
                 className="inline-block"
               >
                 <span className="text-2xl md:text-3xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent drop-shadow-lg">
@@ -175,7 +175,7 @@ function App() {
                 <motion.span
                   initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
                   animate={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ delay: 1.5, duration: 1 }}
+                  transition={isMobile ? { duration: 0 } : { delay: 1.5, duration: 1 }}
                   className="bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text w-fit pb-2"
                 >
                   {content.hero.title.highlight}
@@ -191,7 +191,7 @@ function App() {
               <motion.div
                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                transition={{ delay: 2.5, duration: 0.8 }}
+                transition={isMobile ? { duration: 0 } : { delay: 2.5, duration: 0.8 }}
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <PrimaryButton onClick={() => scrollToSection('mentorias')}>
@@ -205,9 +205,9 @@ function App() {
 
             <div className="absolute bottom-0 right-0 h-[90vh] lg:h-[105vh] w-full lg:w-[65%] items-end justify-end pointer-events-none hidden md:flex">
               <motion.div
-                initial={isMobile ? undefined : { opacity: 0, x: 100 }}
-                animate={isMobile ? undefined : { opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+                animate={isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+                transition={isMobile ? { duration: 0 } : { duration: 1, delay: 0.5 }}
                 className="relative h-full w-auto right-[-5%] lg:right-[-2%] z-10 flex items-end"
               >
                 <img
@@ -231,15 +231,14 @@ function App() {
               </motion.div>
             </div>
 
-            <motion.a
-              href="#visao"
-              initial={isMobile ? undefined : { opacity: 0, y: -20 }}
-              animate={isMobile ? undefined : { opacity: 1, y: 0 }}
-              transition={{ delay: 3, duration: 1 }}
-              className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 text-slate-400 hover:text-white transition-colors cursor-pointer animate-bounce"
+            <motion.div
+              initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={isMobile ? { duration: 0 } : { duration: 1, delay: 3, repeat: Infinity, repeatType: "reverse" }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce"
             >
               <ChevronDown size={32} />
-            </motion.a>
+            </motion.div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[40vh] bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent z-20 pointer-events-none" />
           </Container>
