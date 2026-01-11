@@ -194,5 +194,29 @@
         "copyright": "© 2024 Método V&A. Todos os direitos reservados.",
         "developer_text": "Feito com 💜 por",
         "developer_link": "Insiderblue"
+    },
+    "chat": {
+        "mentor_name": "Jovana Arantes",
+        "custom_messages": {
+            "initial": [
+                {
+                    "text": "Olá! Sou Jovana Arantes. Tudo bem? 👋"
+                },
+                {
+                    "text": "Vi que você tem interesse em organizar e crescer seu escritório. Quer saber como o Método V&A pode te ajudar?"
+                }
+            ],
+            "followUp": [
+                {
+                    "text": "Na minha mentoria, focamos em Gestão, Pessoas e Financeiro."
+                },
+                {
+                    "text": "Você sente que seu escritório depende 100% de você hoje?"
+                },
+                {
+                    "text": "Vamos conversar para eu entender seu momento atual! 👇"
+                }
+            ]
+        }
     }
 }

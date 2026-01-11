@@ -6,18 +6,18 @@ import {
     BarChart3, Sparkles, Shield, X, Award, BookOpen, Lightbulb,
     Landmark, Briefcase, FileSearch
 } from 'lucide-react'
-import { BlurReveal } from './components/BlurReveal'
-import { ScrollReveal } from './components/ScrollReveal'
-import { FloatingChatWidget } from './components/FloatingChatWidget'
-import ParticlesHero from './components/ParticlesHero'
-import ParticlesSection from './components/ParticlesSection'
-import Container from './components/Container'
-import { PrimaryButton, SecondaryButton } from './components/Button'
-import BackgroundIcons from './components/BackgroundIcons'
-import { CountUp } from './components/CountUp'
-import Footer from './components/Footer'
-import { useIsMobile } from './hooks/useIsMobile'
-import content from './texts/mentoria-ia.json'
+import { BlurReveal } from '../../components/BlurReveal'
+import { ScrollReveal } from '../../components/ScrollReveal'
+import { FloatingChatWidget } from '../../components/FloatingChatWidget'
+import ParticlesHero from '../../components/ParticlesHero'
+import ParticlesSection from '../../components/ParticlesSection'
+import Container from '../../components/Container'
+import { PrimaryButton, SecondaryButton } from '../../components/Button'
+import BackgroundIcons from '../../components/BackgroundIcons'
+import { CountUp } from '../../components/CountUp'
+import Footer from '../../components/Footer'
+import { useIsMobile } from '../../hooks/useIsMobile'
+import content from '../../texts/mentoria-ia.json'
 
 // --- Components ---
 

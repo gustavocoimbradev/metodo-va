@@ -1,0 +1,70 @@
+{
+    "defaults": {
+        "initial_pairs": [
+            {
+                "first": "Olá! 👋 Seja bem-vindo ao Método V&A!",
+                "second": "Quer conhecer nossas mentorias para advogados?"
+            },
+            {
+                "first": "Oi! Que bom ter você por aqui! 🚀",
+                "second": "Posso te ajudar a escolher a mentoria ideal para você."
+            },
+            {
+                "first": "Olá! Está buscando crescer na advocacia?",
+                "second": "Nossas mentorias podem te ajudar a alcançar seus objetivos."
+            },
+            {
+                "first": "Bem-vindo! 👋 Somos Túlio Viana e Jovana Arantes.",
+                "second": "Vamos conversar sobre como podemos te ajudar?"
+            },
+            {
+                "first": "Oi! Você quer aprender com quem já trilhou o caminho do sucesso?",
+                "second": "Conheça nossas mentorias exclusivas para advogados."
+            }
+        ],
+        "follow_up_messages": [
+            "Temos duas mentorias: Gestão de Escritório e IA para Advocacia.",
+            "Posso te explicar melhor como funcionam as mentorias?",
+            "Já ajudamos mais de 500 advogados a transformar suas carreiras.",
+            "Quer saber qual mentoria é ideal para o seu momento?",
+            "Posso te enviar mais informações sobre as mentorias?",
+            "Estamos online para tirar suas dúvidas.",
+            "Qual é o maior desafio do seu escritório hoje?",
+            "Nossa metodologia é 100% prática e aplicável.",
+            "Quer agendar uma conversa com nossa equipe?",
+            "A mentoria certa pode acelerar seus resultados.",
+            "Ficou com alguma dúvida? É só perguntar!",
+            "Posso te ajudar a dar o próximo passo na sua carreira."
+        ]
+    },
+    "ui": {
+        "status_online": "Online agora",
+        "typing_suffix": "está digitando...",
+        "cta_button": "Falar com Especialista"
+    },
+    "consultant": {
+        "mentor_name": "Consultor V&A",
+        "mentor_image": "/img/consultant.webp",
+        "custom_messages": {
+            "initial": [
+                {
+                    "text": "Olá! Sou Consultor Especialista do Método V&A. 👋"
+                },
+                {
+                    "text": "Vi que você tem interesse em transformar os resultados do seu escritório. Posso te ajudar a escolher a melhor mentoria para o seu momento?"
+                }
+            ],
+            "followUp": [
+                {
+                    "text": "Temos mentorias focadas em Gestão Total e Inteligência Artificial para advogados."
+                },
+                {
+                    "text": "Você busca mais organização e lucro (Gestão) ou produtividade e automação (IA)?"
+                },
+                {
+                    "text": "Posso te explicar como funciona nossa aplicação. Me chama aqui! 👇"
+                }
+            ]
+        }
+    }
+}

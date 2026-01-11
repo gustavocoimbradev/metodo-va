@@ -16,8 +16,8 @@ import { PrimaryButton, SecondaryButton } from './components/Button'
 import BackgroundIcons from './components/BackgroundIcons'
 import { CountUp } from './components/CountUp'
 import Footer from './components/Footer'
-import content from './api/mentoria-gestao.json'
 import { useIsMobile } from './hooks/useIsMobile'
+import content from './texts/mentoria-gestao.json'
 
 // --- Components ---
 
@@ -88,18 +88,12 @@ const StatCard = ({ value, label, icon: Icon, suffix = '' }) => (
     </div>
 )
 
-// --- Jovana Mentorship Messages for Chat ---
-const JOVANA_MENTORSHIP_MESSAGES = {
-    initial: [
-        { text: 'Olá! Sou Jovana Arantes. Que bom ver seu interesse na mentoria de Gestão de Escritório! 💼' },
-        { text: 'Quer transformar seu escritório em uma operação lucrativa e organizada?' }
-    ],
-    followUp: [
-        { text: 'Na mentoria, eu ensino como criar processos que funcionam sem que você precise apagar incêndios todo dia.' },
-        { text: 'Vamos organizar seu time, suas finanças e seus indicadores para você crescer com previsibilidade.' },
-        { text: 'É uma mentoria focada em quem quer sair da operação e focar no estratégico.' },
-        { text: 'Posso te explicar como funciona cada etapa do Método V&A aplicado à gestão. Vamos conversar? 💬' }
-    ]
+// --- Icon Mapping ---
+const iconMap = {
+    FileSearch, Sparkles, Settings, Users,
+    Landmark, TrendingUp, BarChart3, Brain,
+    X, Shield, Briefcase, Zap, Star, CheckCircle, Rocket,
+    Award, LineChart, Scale, BarChart
 }
 
 // --- Countdown Timer Component ---
@@ -192,46 +186,23 @@ function MentoriaJovana() {
         window.dispatchEvent(new CustomEvent('openChatWidget'))
     }
 
-    const masteryAreas = [
-        {
-            icon: Scale,
-            title: 'Processos e Padrão de Atendimento',
-            description: 'Crie sistemas que funcionam mesmo sem você, garantindo qualidade em cada interação.',
-            items: ['Mapeamento de jornada do cliente', 'Padrão de atendimento premium', 'Rotinas operacionais claras', 'Segurança jurídica nos prazos']
-        },
-        {
-            icon: BarChart,
-            title: 'Rotina de Gestão e Indicadores',
-            description: 'Aprenda a ler os números do seu escritório e tomar decisões baseadas em dados reais.',
-            items: ['Controle de fluxo de caixa', 'Precificação estratégica', 'Gestão tributária e impostas', 'Painel de indicadores gerenciais']
-        },
-        {
-            icon: Users,
-            title: 'Organização de Equipe e Funções',
-            description: 'Monte um time de alta performance com papéis claros e responsabilidades definidas.',
-            items: ['Contratação de associados', 'Integração de novos colaboradores', 'Definição de cargos e funções (KPIs)', 'Cultura de responsabilidade']
-        },
-        {
-            icon: TrendingUp,
-            title: 'Crescimento com Previsibilidade',
-            description: 'Expanda seu escritório de forma estruturada, sustentável e lucrativa.',
-            items: ['Controller jurídico e sistemas', 'Escala sem perda de qualidade', 'Gargalos ocultos na operação', 'Visão estratégica do negócio']
-        }
-    ]
+    // Load data from JSON (mapping icons and handling missing props)
+    const masteryAreas = content.mastery.cards.map(card => ({
+        ...card,
+        icon: iconMap[card.icon] || Scale // Default to Scale if icon not found or specified
+    }))
 
-    const targetAudience = [
-        { icon: Landmark, title: 'Quer faturamento milionário', description: 'Sem mágica, sem atalhos — apenas trabalho estruturado e execução impecável com o Método V&A.', isPositive: true },
-        { icon: TrendingUp, title: 'Busca crescer com previsibilidade', description: 'Escritórios que desejam expandir de forma organizada, sustentável e com resultados mensuráveis.', isPositive: true },
-        { icon: BarChart3, title: 'Quer organização total', description: 'Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência.', isPositive: true },
-        { icon: Users, title: 'Deseja produtividade real', description: 'Implementar um sistema concreto e aplicável que libere o sócio para focar no que realmente importa.', isPositive: true },
-    ]
+    const targetAudience = content.audience.target_cards.map(card => ({
+        ...card,
+        icon: iconMap[card.icon] || Target, // Default to Target if icon not found or specified
+        isPositive: true
+    }))
 
-    const notForYou = [
-        { icon: X, title: 'Busca "atalho mágico"', description: 'Se acredita em fórmulas milagrosas que prometem resultados sem esforço, esta mentoria não é para você.', isPositive: false },
-        { icon: X, title: 'Não quer implementar', description: 'Nosso método funciona apenas para quem está disposto a implementar, testar, ajustar e persistir.', isPositive: false },
-        { icon: X, title: 'Quer apenas teoria', description: 'Se procura conteúdo genérico e superficial, há opções mais baratas. Nossa mentoria é prática e profunda.', isPositive: false },
-        { icon: X, title: 'Sucesso antes do trabalho', description: 'No dicionário sucesso vem antes de trabalho. Na vida real, é exatamente o oposto.', isPositive: false },
-    ]
+    const notForYou = content.audience.not_for_you.cards.map(card => ({
+        ...card,
+        icon: iconMap[card.icon] || X, // Default to X if icon not found or specified
+        isPositive: false
+    }))
 
     return (
         <div className="bg-[#020617] text-slate-100 min-h-screen overflow-x-hidden selection:bg-purple-500/30 font-sans">
@@ -241,9 +212,9 @@ function MentoriaJovana() {
             />
 
             <FloatingChatWidget
-                mentorName="Jovana Arantes"
+                mentorName={content.chat.mentor_name}
                 mentorImage="/img/img128.webp"
-                customMessages={JOVANA_MENTORSHIP_MESSAGES}
+                customMessages={content.chat.custom_messages}
                 themeColor="purple"
             />
 
@@ -322,7 +293,7 @@ function MentoriaJovana() {
                                 <PrimaryButton onClick={() => scrollToSection('inscricao')} icon variant="purple">
                                     {content.hero.buttons.primary}
                                 </PrimaryButton>
-                                <SecondaryButton onClick={openChatWidget}>
+                                <SecondaryButton onClick={openChatWidget} variant="purple">
                                     <MessageCircle className="w-5 h-5 mr-2" />
                                     {content.hero.buttons.secondary}
                                 </SecondaryButton>

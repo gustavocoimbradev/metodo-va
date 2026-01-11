@@ -3,44 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, User } from "lucide-react";
 
 // Initial Hook + Value Value Proposition (Pairs)
-const INITIAL_PAIRS = [
-    {
-        first: "Olá! 👋 Seja bem-vindo ao Método V&A!",
-        second: "Quer conhecer nossas mentorias para advogados?"
-    },
-    {
-        first: "Oi! Que bom ter você por aqui! 🚀",
-        second: "Posso te ajudar a escolher a mentoria ideal para você."
-    },
-    {
-        first: "Olá! Está buscando crescer na advocacia?",
-        second: "Nossas mentorias podem te ajudar a alcançar seus objetivos."
-    },
-    {
-        first: "Bem-vindo! 👋 Somos Túlio Viana e Jovana Arantes.",
-        second: "Vamos conversar sobre como podemos te ajudar?"
-    },
-    {
-        first: "Oi! Você quer aprender com quem já trilhou o caminho do sucesso?",
-        second: "Conheça nossas mentorias exclusivas para advogados."
-    }
-];
+// Now loaded from ../texts/chat.json
+import defaultChatContent from '../texts/chat.json'
 
-// Continuous Flow Messages (Random selection)
-const FOLLOW_UP_MESSAGES = [
-    "Temos duas mentorias: Gestão de Escritório e IA para Advocacia.",
-    "Posso te explicar melhor como funcionam as mentorias?",
-    "Já ajudamos mais de 500 advogados a transformar suas carreiras.",
-    "Quer saber qual mentoria é ideal para o seu momento?",
-    "Posso te enviar mais informações sobre as mentorias?",
-    "Estamos online para tirar suas dúvidas.",
-    "Qual é o maior desafio do seu escritório hoje?",
-    "Nossa metodologia é 100% prática e aplicável.",
-    "Quer agendar uma conversa com nossa equipe?",
-    "A mentoria certa pode acelerar seus resultados.",
-    "Ficou com alguma dúvida? É só perguntar!",
-    "Posso te ajudar a dar o próximo passo na sua carreira."
-];
+const INITIAL_PAIRS = defaultChatContent.defaults.initial_pairs;
+const FOLLOW_UP_MESSAGES = defaultChatContent.defaults.follow_up_messages;
 
 export const FloatingChatWidget = ({
     mentorName = "Equipe V&A",
@@ -196,7 +163,7 @@ export const FloatingChatWidget = ({
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-white text-sm">{mentorName}</h3>
-                                    <p className={`${themeSubtext} text-xs`}>Online agora</p>
+                                    <p className={`${themeSubtext} text-xs`}>{defaultChatContent.ui.status_online}</p>
                                 </div>
                             </div>
                             <button
@@ -238,7 +205,7 @@ export const FloatingChatWidget = ({
                                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                                         <span className="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce"></span>
-                                        <span>{mentorName} está digitando...</span>
+                                        <span>{mentorName} {defaultChatContent.ui.typing_suffix}</span>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -252,7 +219,7 @@ export const FloatingChatWidget = ({
                                 rel="noopener noreferrer"
                                 className={`flex items-center justify-center gap-2 w-full py-3 ${themeButton} rounded-xl text-white font-bold transition-all shadow-lg group`}
                             >
-                                <span>Falar com Especialista</span>
+                                <span>{defaultChatContent.ui.cta_button}</span>
                                 <Send size={16} className="group-hover:translate-x-1 transition-transform" />
                             </a>
                         </div>

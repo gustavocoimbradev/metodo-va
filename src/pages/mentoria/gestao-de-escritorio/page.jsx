@@ -4,25 +4,25 @@ import {
     Brain, Cpu, Zap, Clock, Target, TrendingUp, Users, ArrowRight,
     CheckCircle, Star, MessageCircle, FileText, Rocket, Settings,
     BarChart3, Sparkles, Shield, X, Award, BookOpen, Lightbulb,
-    Landmark, Briefcase, FileSearch
+    LayoutDashboard, PieChart, BarChart, Landmark, Scale, Briefcase
 } from 'lucide-react'
-import { BlurReveal } from './components/BlurReveal'
-import { ScrollReveal } from './components/ScrollReveal'
-import { FloatingChatWidget } from './components/FloatingChatWidget'
-import ParticlesHero from './components/ParticlesHero'
-import ParticlesSection from './components/ParticlesSection'
-import Container from './components/Container'
-import { PrimaryButton, SecondaryButton } from './components/Button'
-import BackgroundIcons from './components/BackgroundIcons'
-import { CountUp } from './components/CountUp'
-import Footer from './components/Footer'
-import { useIsMobile } from './hooks/useIsMobile'
-import content from './texts/mentoria-ia.json'
+import { BlurReveal } from '../../components/BlurReveal'
+import { ScrollReveal } from '../../components/ScrollReveal'
+import { FloatingChatWidget } from '../../components/FloatingChatWidget'
+import ParticlesHero from '../../components/ParticlesHero'
+import ParticlesSection from '../../components/ParticlesSection'
+import Container from '../../components/Container'
+import { PrimaryButton, SecondaryButton } from '../../components/Button'
+import BackgroundIcons from '../../components/BackgroundIcons'
+import { CountUp } from '../../components/CountUp'
+import Footer from '../../components/Footer'
+import { useIsMobile } from '../../hooks/useIsMobile'
+import content from '../../texts/mentoria-gestao.json'
 
 // --- Components ---
 
 const GlassCard = ({ children, className = "" }) => (
-    <div className={`backdrop-blur-xl bg-blue-950/30 border border-blue-200/5 rounded-3xl p-8 shadow-2xl ${className}`}>
+    <div className={`backdrop-blur-xl bg-purple-950/30 border border-purple-200/5 rounded-3xl p-8 shadow-2xl ${className}`}>
         {children}
     </div>
 )
@@ -42,11 +42,11 @@ const GradientBlob = ({ className }) => (
 const MasteryCard = ({ icon: Icon, title, description, items }) => (
     <motion.div
         whileHover={{ y: -5, scale: 1.02 }}
-        className="bg-gradient-to-br from-blue-950/60 to-slate-900/60 border border-blue-500/10 rounded-2xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 h-full"
+        className="bg-gradient-to-br from-purple-950/60 to-slate-900/60 border border-purple-500/10 rounded-2xl p-6 md:p-8 hover:border-purple-400/30 transition-all duration-300 h-full"
     >
         <div className="flex items-start gap-4 mb-6">
-            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center shrink-0">
-                <Icon className="w-7 h-7 text-cyan-400" />
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-violet-500/20 flex items-center justify-center shrink-0">
+                <Icon className="w-7 h-7 text-purple-400" />
             </div>
             <h3 className="text-xl font-bold text-white mt-3">{title}</h3>
         </div>
@@ -54,7 +54,7 @@ const MasteryCard = ({ icon: Icon, title, description, items }) => (
         <ul className="space-y-2">
             {items.map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
                     <span>{item}</span>
                 </li>
             ))}
@@ -63,8 +63,8 @@ const MasteryCard = ({ icon: Icon, title, description, items }) => (
 )
 
 const TargetCard = ({ icon: Icon, title, description, isPositive = true }) => (
-    <div className={`p-6 rounded-2xl border h-full ${isPositive ? 'bg-gradient-to-br from-blue-950/50 to-cyan-950/30 border-cyan-500/20' : 'bg-slate-900/30 border-slate-700/30'}`}>
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${isPositive ? 'bg-cyan-500/20 text-cyan-400' : 'bg-red-500/10 text-red-400'}`}>
+    <div className={`p-6 rounded-2xl border h-full ${isPositive ? 'bg-gradient-to-br from-purple-950/50 to-violet-950/30 border-purple-500/20' : 'bg-slate-900/30 border-slate-700/30'}`}>
+        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${isPositive ? 'bg-purple-500/20 text-purple-400' : 'bg-red-500/10 text-red-400'}`}>
             <Icon className="w-6 h-6" />
         </div>
         <h4 className={`font-bold mb-2 ${isPositive ? 'text-white' : 'text-slate-400'}`}>{title}</h4>
@@ -74,8 +74,8 @@ const TargetCard = ({ icon: Icon, title, description, isPositive = true }) => (
 
 const StatCard = ({ value, label, icon: Icon, suffix = '' }) => (
     <div className="text-center p-6">
-        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mx-auto mb-4">
-            <Icon className="w-7 h-7 text-cyan-400" />
+        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-500/20 flex items-center justify-center mx-auto mb-4">
+            <Icon className="w-7 h-7 text-purple-400" />
         </div>
         <div className="text-3xl md:text-4xl font-bold text-white mb-1">
             {typeof value === 'number' ? (
@@ -92,15 +92,16 @@ const StatCard = ({ value, label, icon: Icon, suffix = '' }) => (
 const iconMap = {
     FileSearch, Sparkles, Settings, Users,
     Landmark, TrendingUp, BarChart3, Brain,
-    X, Shield, Briefcase, Zap, Star, CheckCircle, Rocket
+    X, Shield, Briefcase, Zap, Star, CheckCircle, Rocket,
+    Award, LineChart, Scale, BarChart
 }
 
 // --- Countdown Timer Component ---
-const COUNTDOWN_KEY_IA = 'mentoria_ia_countdown_end'
+const COUNTDOWN_KEY_JOVANA = 'mentoria_jovana_countdown_end'
 
 const CountdownTimer = () => {
     const getInitialTime = () => {
-        const saved = localStorage.getItem(COUNTDOWN_KEY_IA)
+        const saved = localStorage.getItem(COUNTDOWN_KEY_JOVANA)
         if (saved) {
             const endTime = parseInt(saved, 10)
             const now = Date.now()
@@ -115,7 +116,7 @@ const CountdownTimer = () => {
         }
         // No saved time or expired - set new 24h countdown
         const newEndTime = Date.now() + (24 * 60 * 60 * 1000)
-        localStorage.setItem(COUNTDOWN_KEY_IA, newEndTime.toString())
+        localStorage.setItem(COUNTDOWN_KEY_JOVANA, newEndTime.toString())
         return { hours: 23, minutes: 59, seconds: 59 }
     }
 
@@ -133,7 +134,7 @@ const CountdownTimer = () => {
                 } else {
                     // Timer ended - reset localStorage and restart
                     const newEndTime = Date.now() + (24 * 60 * 60 * 1000)
-                    localStorage.setItem(COUNTDOWN_KEY_IA, newEndTime.toString())
+                    localStorage.setItem(COUNTDOWN_KEY_JOVANA, newEndTime.toString())
                     return { hours: 23, minutes: 59, seconds: 59 }
                 }
             })
@@ -145,18 +146,18 @@ const CountdownTimer = () => {
 
     return (
         <div className="flex items-center justify-center gap-3 text-white">
-            <div className="bg-slate-900/80 border border-cyan-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400">{pad(timeLeft.hours)}</div>
+            <div className="bg-slate-900/80 border border-purple-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
+                <div className="text-2xl md:text-3xl font-bold text-purple-400">{pad(timeLeft.hours)}</div>
                 <div className="text-xs text-slate-400 uppercase tracking-wider">Horas</div>
             </div>
-            <span className="text-2xl text-cyan-400 font-bold">:</span>
-            <div className="bg-slate-900/80 border border-cyan-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400">{pad(timeLeft.minutes)}</div>
+            <span className="text-2xl text-purple-400 font-bold">:</span>
+            <div className="bg-slate-900/80 border border-purple-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
+                <div className="text-2xl md:text-3xl font-bold text-purple-400">{pad(timeLeft.minutes)}</div>
                 <div className="text-xs text-slate-400 uppercase tracking-wider">Min</div>
             </div>
-            <span className="text-2xl text-cyan-400 font-bold">:</span>
-            <div className="bg-slate-900/80 border border-cyan-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400">{pad(timeLeft.seconds)}</div>
+            <span className="text-2xl text-purple-400 font-bold">:</span>
+            <div className="bg-slate-900/80 border border-purple-500/30 rounded-xl px-4 py-3 text-center min-w-[70px]">
+                <div className="text-2xl md:text-3xl font-bold text-purple-400">{pad(timeLeft.seconds)}</div>
                 <div className="text-xs text-slate-400 uppercase tracking-wider">Seg</div>
             </div>
         </div>
@@ -165,7 +166,7 @@ const CountdownTimer = () => {
 
 // --- Main Page ---
 
-function MentoriaIA() {
+function MentoriaJovana() {
     const isMobile = useIsMobile()
     const { scrollYProgress } = useScroll()
     const scaleX = useSpring(scrollYProgress, {
@@ -185,52 +186,54 @@ function MentoriaIA() {
         window.dispatchEvent(new CustomEvent('openChatWidget'))
     }
 
-    // Load data from JSON (mapping icons)
+    // Load data from JSON (mapping icons and handling missing props)
     const masteryAreas = content.mastery.cards.map(card => ({
         ...card,
-        icon: iconMap[card.icon] || Brain // fallback
+        icon: iconMap[card.icon] || Scale // Default to Scale if icon not found or specified
     }))
 
     const targetAudience = content.audience.target_cards.map(card => ({
         ...card,
-        icon: iconMap[card.icon] || Target
+        icon: iconMap[card.icon] || Target, // Default to Target if icon not found or specified
+        isPositive: true
     }))
 
     const notForYou = content.audience.not_for_you.cards.map(card => ({
         ...card,
-        icon: iconMap[card.icon] || X
+        icon: iconMap[card.icon] || X, // Default to X if icon not found or specified
+        isPositive: false
     }))
 
     return (
-        <div className="bg-[#020617] text-slate-100 min-h-screen overflow-x-hidden selection:bg-cyan-500/30 font-sans">
+        <div className="bg-[#020617] text-slate-100 min-h-screen overflow-x-hidden selection:bg-purple-500/30 font-sans">
             <motion.div
-                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-400 origin-left z-50 shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-violet-500 origin-left z-50 shadow-[0_0_10px_rgba(168,85,247,0.5)]"
                 style={{ scaleX }}
             />
 
             <FloatingChatWidget
                 mentorName={content.chat.mentor_name}
-                mentorImage="/img/tulio-profile.webp"
+                mentorImage="/img/img128.webp"
                 customMessages={content.chat.custom_messages}
-                themeColor="blue"
+                themeColor="purple"
             />
 
             {/* Background Ambience */}
             <motion.div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <GradientBlob className="bg-cyan-900 top-[-10%] left-[-10%] w-[60vw] h-[60vw]" />
-                <GradientBlob className="bg-blue-900 top-[40%] right-[-20%] w-[50vw] h-[50vw]" />
-                <GradientBlob className="bg-indigo-900/30 bottom-[-10%] left-[10%] w-[70vw] h-[70vw]" />
+                <GradientBlob className="bg-purple-900 top-[-10%] left-[-10%] w-[60vw] h-[60vw]" />
+                <GradientBlob className="bg-violet-900 top-[40%] right-[-20%] w-[50vw] h-[50vw]" />
+                <GradientBlob className="bg-indigo-900/10 bottom-[-10%] left-[10%] w-[70vw] h-[70vw]" />
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
             </motion.div>
 
-            <BackgroundIcons variant="blue" />
+            <BackgroundIcons variant="purple" />
 
             <main className="relative z-10">
 
                 {/* ========== HERO SECTION ========== */}
                 <section className="relative w-full min-h-screen flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0 bg-[#020617]">
-                        <ParticlesHero color="#06b6d4" />
+                        <ParticlesHero color="#a855f7" />
                         <div className="absolute inset-0 bg-[#020617]/80 md:bg-transparent pointer-events-none md:hidden" />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/80 to-transparent pointer-events-none hidden md:block" />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent pointer-events-none" />
@@ -242,17 +245,17 @@ function MentoriaIA() {
                             {/* Badge */}
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={isMobile ? { duration: 0 } : { duration: 0.8 }}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20"
                             >
-                                <Brain className="w-4 h-4 text-cyan-400" />
-                                <span className="text-cyan-400 text-sm font-bold uppercase tracking-wider">{content.hero.badge}</span>
+                                <Award className="w-4 h-4 text-purple-400" />
+                                <span className="text-purple-400 text-sm font-bold uppercase tracking-wider">{content.hero.badge}</span>
                             </motion.div>
 
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={isMobile ? { duration: 0 } : { duration: 0.8, delay: 0.2 }}
                             >
                                 <span className="text-lg md:text-xl font-bold tracking-tighter bg-gradient-to-r from-slate-400 via-slate-100 to-slate-400 bg-clip-text text-transparent">
@@ -266,9 +269,9 @@ function MentoriaIA() {
                                 </BlurReveal>
                                 <motion.span
                                     initial={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(10px)" }}
-                                    animate={isMobile ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
+                                    animate={isMobile ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 1, y: 0, filter: "blur(0px)" }}
                                     transition={isMobile ? { duration: 0 } : { delay: 1.2, duration: 1 }}
-                                    className="bg-gradient-to-r from-cyan-400 to-blue-400 text-transparent bg-clip-text block mt-2"
+                                    className="bg-gradient-to-r from-purple-400 to-violet-400 text-transparent bg-clip-text block mt-2"
                                 >
                                     {content.hero.title.highlight}
                                 </motion.span>
@@ -283,34 +286,32 @@ function MentoriaIA() {
 
                             <motion.div
                                 initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+                                animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                                 transition={isMobile ? { duration: 0 } : { delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >
-                                <PrimaryButton onClick={() => scrollToSection('inscricao')} icon>
+                                <PrimaryButton onClick={() => scrollToSection('inscricao')} icon variant="purple">
                                     {content.hero.buttons.primary}
                                 </PrimaryButton>
-                                <SecondaryButton onClick={openChatWidget}>
+                                <SecondaryButton onClick={openChatWidget} variant="purple">
                                     <MessageCircle className="w-5 h-5 mr-2" />
                                     {content.hero.buttons.secondary}
                                 </SecondaryButton>
                             </motion.div>
                         </div>
-
-
                     </Container>
                 </section>
 
-                {/* ========== ABOUT MENTOR ========== */}
+                {/* ========== SUA MENTORA ========== */}
                 <Section id="sobre" className="py-20 md:py-32">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <ScrollReveal animation="slide-right">
                             <div className="relative">
-                                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                                     <img
-                                        src="/img/tulio.webp"
-                                        alt="Túlio Viana"
-                                        className="w-full h-full object-cover"
+                                        src="/img/img128.webp"
+                                        alt="Jovana Arantes"
+                                        className="w-full h-full object-cover object-top"
                                     />
                                 </div>
                             </div>
@@ -318,29 +319,29 @@ function MentoriaIA() {
 
                         <ScrollReveal animation="slide-left">
                             <div className="space-y-6">
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase">
-                                    <Brain className="w-3 h-3" /> Seu Mentor
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold tracking-widest uppercase">
+                                    <Star className="w-3 h-3" /> {content.mentor.badge}
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold text-white">
-                                    Túlio Viana
+                                    {content.mentor.name}
                                 </h2>
-                                <p className="text-xl text-cyan-400 font-medium font-bold uppercase tracking-wide">
-                                    Especialista em Inteligência Artificial e Direito do Trabalho
+                                <p className="text-xl text-purple-400 font-medium font-bold uppercase tracking-wide">
+                                    {content.mentor.role}
                                 </p>
                                 <p className="text-slate-300 leading-relaxed text-lg">
-                                    Túlio é pioneiro na aplicação de IA na advocacia brasileira. Ele revolucionou a forma como o escritório produz conteúdo, atende clientes e escala resultados — tudo com inteligência artificial.
+                                    {content.mentor.description}
                                 </p>
-                                <p className="text-slate-300 leading-relaxed italic border-l-4 border-cyan-500 pl-6">
-                                    &quot;Minha mentoria ensina advogados a rodarem seus escritórios 100% em IA, multiplicando produtividade sem perder qualidade, segurança ou personalização no atendimento.&quot;
+                                <p className="text-slate-300 leading-relaxed italic border-l-4 border-purple-500 pl-6">
+                                    {content.mentor.quote}
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
-                                    <div className="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-widest text-xs">
+                                    <div className="flex items-center gap-2 text-purple-400 font-bold uppercase tracking-widest text-xs">
                                         <CheckCircle className="w-5 h-5" />
-                                        <span className="text-slate-300 font-bold">Pioneiro em IA Jurídica</span>
+                                        <span className="text-slate-300 font-bold">{content.mentor.tags[0]}</span>
                                     </div>
-                                    <div className="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-widest text-xs">
+                                    <div className="flex items-center gap-2 text-purple-400 font-bold uppercase tracking-widest text-xs">
                                         <CheckCircle className="w-5 h-5" />
-                                        <span className="text-slate-300 font-bold">Escala Sem Barreiras</span>
+                                        <span className="text-slate-300 font-bold">{content.mentor.tags[1]}</span>
                                     </div>
                                 </div>
                             </div>
@@ -348,34 +349,39 @@ function MentoriaIA() {
                     </div>
                 </Section>
 
-                {/* ========== WHAT YOU'LL MASTER ========== */}
+                {/* ========== O QUE VOCÊ VAI DOMINAR ========== */}
                 <Section id="dominar" className="py-20 md:py-32">
-                    <ParticlesSection id="particles-skills" density={30} color="#22d3ee" className="opacity-30" />
+                    <ParticlesSection id="particles-skills-jovana" density={30} color="#a855f7" className="opacity-30" />
 
                     <ScrollReveal animation="blur-up" className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
-                            <BookOpen className="w-3 h-3" /> Conhecimento Prático
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold tracking-widest uppercase mb-4">
+                            <BookOpen className="w-3 h-3" /> {content.mastery.badge}
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                            O Que Você Vai <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Dominar</span>
+                            {content.mastery.title.prefix} <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">{content.mastery.title.highlight}</span>
                         </h2>
                         <p className="text-slate-400 max-w-2xl mx-auto text-lg font-light">
-                            Uso prático de IA para produzir mais, com mais qualidade e consistência — sem perder segurança e método.
+                            {content.mastery.description}
                         </p>
                     </ScrollReveal>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {masteryAreas.map((area, index) => (
                             <ScrollReveal key={index} animation={index % 2 === 0 ? "slide-right" : "slide-left"}>
-                                <MasteryCard {...area} />
+                                <MasteryCard
+                                    icon={area.icon}
+                                    title={content.mastery.cards[index].title}
+                                    description={content.mastery.cards[index].description}
+                                    items={content.mastery.cards[index].items}
+                                />
                             </ScrollReveal>
                         ))}
                     </div>
 
                     <ScrollReveal animation="fade-up" className="mt-12">
-                        <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-950/30 to-blue-950/30 border border-cyan-500/10">
+                        <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-950/30 to-violet-950/30 border border-purple-500/10">
                             <p className="text-lg text-slate-300 leading-relaxed font-light">
-                                &quot;Esta mentoria leva seu escritório para a era da inteligência artificial — onde produtividade e qualidade não são mais trade-offs.&quot;
+                                {content.mastery.quote_box}
                             </p>
                         </div>
                     </ScrollReveal>
@@ -384,76 +390,86 @@ function MentoriaIA() {
                 {/* ========== TARGET AUDIENCE ========== */}
                 <Section id="para-quem" className="py-20 md:py-32">
                     <ScrollReveal animation="blur-up" className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
-                            <Target className="w-3 h-3" /> Para Quem é Esta Mentoria
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold tracking-widest uppercase mb-4">
+                            <Target className="w-3 h-3" /> {content.audience.badge}
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                            Esta Mentoria é Para <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent italic">Você Se:</span>
+                            {content.audience.title.prefix} <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent italic">{content.audience.title.highlight}</span>
                         </h2>
                     </ScrollReveal>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {targetAudience.map((item, index) => (
                             <ScrollReveal key={index} animation="fade-up" delay={index * 0.1}>
-                                <TargetCard {...item} />
+                                <TargetCard
+                                    icon={item.icon}
+                                    title={content.audience.target_cards[index].title}
+                                    description={content.audience.target_cards[index].description}
+                                    isPositive={item.isPositive}
+                                />
                             </ScrollReveal>
                         ))}
                     </div>
 
                     {/* Not For You Section */}
                     <ScrollReveal animation="fade-up-large" duration={1} viewport={{ once: true, amount: 0.2 }} className="mt-20">
-                        <GlassCard className="!bg-slate-900/50 border-slate-700/30">
+                        <GlassCard className="!bg-purple-900/40 border-purple-500/20">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-2 bg-red-500/10 rounded-lg">
                                     <Shield className="w-6 h-6 text-red-400" />
                                 </div>
                                 <div className="text-left">
-                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Atenção: Essa mentoria não é para você, se:</h3>
-                                    <p className="text-slate-500 text-sm">Seja honesto consigo mesmo antes de seguir em frente.</p>
+                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{content.audience.not_for_you.title}</h3>
+                                    <p className="text-slate-500 text-sm">{content.audience.not_for_you.subtitle}</p>
                                 </div>
                             </div>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {notForYou.map((item, index) => (
                                     <ScrollReveal key={index} animation="fade-up" delay={index * 0.1}>
-                                        <TargetCard {...item} />
+                                        <TargetCard
+                                            icon={item.icon}
+                                            title={content.audience.not_for_you.cards[index].title}
+                                            description={content.audience.not_for_you.cards[index].description}
+                                            isPositive={item.isPositive}
+                                        />
                                     </ScrollReveal>
                                 ))}
                             </div>
                             <p className="text-slate-500 text-sm mt-6 text-center font-medium">
-                                O Método V&A é para advogados sérios, comprometidos e determinados a transformar suas carreiras.
+                                {content.audience.not_for_you.warning}
                             </p>
                         </GlassCard>
                     </ScrollReveal>
                 </Section>
 
-                {/* ========== AUTHORITY / RESULTS ========== */}
-                <Section id="resultados" className="py-20 md:py-32 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent">
+                {/* ========== BENEFITS / RESULTS ========== */}
+                <Section id="resultados" className="py-20 md:py-32 bg-gradient-to-b from-transparent via-purple-950/10 to-transparent">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <ScrollReveal animation="slide-right">
                             <div className="space-y-6">
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold tracking-widest uppercase">
-                                    <Rocket className="w-3 h-3" /> Impacto Real
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold tracking-widest uppercase">
+                                    <Rocket className="w-3 h-3" /> {content.results.badge}
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                                    Escritório Viana & Arantes <br /> <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Autoridade Comprovada</span>
+                                    {content.results.title.prefix} <br /> <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">{content.results.title.highlight}</span>
                                 </h2>
                                 <p className="text-slate-300 leading-relaxed text-lg font-light">
-                                    Somos o escritório que saiu do zero e se consolidou como uma referência nacional no Direito do Trabalho, com faturamento milionário e excelência operacional.
+                                    {content.results.description}
                                 </p>
 
                                 <div className="space-y-4 pt-4">
-                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-blue-950/30 border border-blue-500/10">
-                                        <Zap className="w-6 h-6 text-cyan-400 shrink-0 mt-1" />
+                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-purple-950/30 border border-purple-500/10">
+                                        <Zap className="w-6 h-6 text-purple-400 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-xs">Produtividade 10x</h4>
-                                            <p className="text-slate-400 text-sm">Nossa equipe produz em escala industrial com qualidade artesanal através do uso inteligente de IA.</p>
+                                            <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-xs">{content.results.highlights[0].title}</h4>
+                                            <p className="text-slate-400 text-sm">{content.results.highlights[0].description}</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-blue-950/30 border border-blue-500/10">
-                                        <Briefcase className="w-6 h-6 text-cyan-400 shrink-0 mt-1" />
+                                    <div className="flex items-start gap-4 p-4 rounded-xl bg-purple-950/30 border border-purple-500/10">
+                                        <Briefcase className="w-6 h-6 text-purple-400 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-xs">Escritório Milionário</h4>
-                                            <p className="text-slate-400 text-sm">Mais de 15 colaboradores diretos e sede própria operada com tecnologia de ponta.</p>
+                                            <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-xs">{content.results.highlights[1].title}</h4>
+                                            <p className="text-slate-400 text-sm">{content.results.highlights[1].description}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -462,10 +478,10 @@ function MentoriaIA() {
 
                         <ScrollReveal animation="slide-left">
                             <div className="grid grid-cols-2 gap-4">
-                                <StatCard value={1500} label="Processos Ativos" icon={CheckCircle} suffix="+" />
-                                <StatCard value={700} label="5 estrelas no Google" icon={Star} suffix="+" />
-                                <StatCard value={15} label="Colaboradores" icon={Users} suffix="+" />
-                                <StatCard value={10} label="Aumento de Velocidade" icon={Zap} suffix="x" />
+                                <StatCard value={content.results.stats[0].value} label={content.results.stats[0].label} icon={CheckCircle} suffix={content.results.stats[0].suffix} />
+                                <StatCard value={content.results.stats[1].value} label={content.results.stats[1].label} icon={Star} suffix={content.results.stats[1].suffix} />
+                                <StatCard value={content.results.stats[2].value} label={content.results.stats[2].label} icon={Users} suffix={content.results.stats[2].suffix} />
+                                <StatCard value={content.results.stats[3].value} label={content.results.stats[3].label} icon={TrendingUp} />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -473,59 +489,59 @@ function MentoriaIA() {
 
                 {/* ========== CTA SECTION ========== */}
                 <Section id="inscricao" className="py-20 md:py-32">
-                    <GlassCard className="relative overflow-hidden !bg-gradient-to-br !from-cyan-950/50 !to-blue-950/50 border-cyan-500/20">
-                        <ParticlesSection id="particles-cta" density={30} color="#22d3ee" className="opacity-30" />
+                    <GlassCard className="relative overflow-hidden !bg-gradient-to-br !from-purple-950/50 !to-violet-950/50 border-purple-500/20">
+                        <ParticlesSection id="particles-cta-jovana" density={30} color="#a855f7" className="opacity-30" />
 
                         <div className="relative z-10 text-center max-w-3xl mx-auto py-8">
                             <ScrollReveal animation="blur-up">
-                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-                                    <Zap className="w-4 h-4 text-cyan-400" />
-                                    <span className="text-cyan-300 text-sm font-bold uppercase tracking-widest">Inscrições Abertas</span>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
+                                    <Zap className="w-4 h-4 text-purple-400" />
+                                    <span className="text-purple-300 text-sm font-bold uppercase tracking-widest">{content.final_cta.badge}</span>
                                 </div>
 
                                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                    Assuma a Liderança <br /> <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent italic">da era da Inteligência Artificial</span>
+                                    {content.final_cta.title.prefix} <br /> <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent italic">{content.final_cta.title.highlight}</span>
                                 </h2>
 
                                 <div className="mb-8">
-                                    <p className="text-slate-400 text-xs mb-4 uppercase tracking-[0.2em] font-medium">Esta oferta expira em:</p>
+                                    <p className="text-slate-400 text-xs mb-4 uppercase tracking-[0.2em] font-medium">{content.final_cta.offer.expires_label}</p>
                                     <CountdownTimer />
                                 </div>
 
-                                {/* Pricing */}
-                                <div className="bg-slate-950/60 border border-cyan-500/20 rounded-2xl p-8 mb-8 shadow-2xl">
+                                <div className="bg-slate-950/60 border border-purple-500/20 rounded-2xl p-8 mb-8 shadow-2xl">
                                     <div className="flex items-center justify-center gap-4 mb-4">
-                                        <span className="text-slate-500 line-through text-xl">R$ 5.997,00</span>
-                                        <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">33% OFF</span>
+                                        <span className="text-slate-500 line-through text-xl">{content.final_cta.offer.old_price}</span>
+                                        <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">{content.final_cta.offer.discount_badge}</span>
                                     </div>
                                     <div className="text-5xl md:text-6xl font-bold text-white mb-2 tracking-tighter">
-                                        R$ 3.997<span className="text-2xl text-cyan-400/50">,00</span>
+                                        {content.final_cta.offer.price}<span className="text-2xl text-purple-400/50">{content.final_cta.offer.cents}</span>
                                     </div>
-                                    <p className="text-slate-400">ou em até 12x de <span className="text-white font-bold">R$ 399,08</span></p>
+                                    <p className="text-slate-400">{content.final_cta.offer.installments} <span className="text-white font-bold">{content.final_cta.offer.installment_value}</span></p>
                                 </div>
 
-                                <blockquote className="border-l-4 border-cyan-600 pl-6 py-4 text-left bg-cyan-950/10 rounded-r-xl mb-8 max-w-2xl mx-auto">
+                                <blockquote className="border-l-4 border-purple-600 pl-6 py-4 text-left bg-purple-950/10 rounded-r-xl mb-8 max-w-2xl mx-auto">
                                     <p className="text-slate-200 italic text-lg mb-2 font-light leading-relaxed">
-                                        &quot;IA Jurídica reduz custos em até 80% e aumenta a produtividade em até 10 vezes. O Método V&A é estratégia comprovada por quem já construiu o sucesso.&quot;
+                                        {content.final_cta.testimonial.text}
                                     </p>
-                                    <footer className="text-cyan-400 font-bold uppercase tracking-widest text-xs">— Túlio Viana</footer>
+                                    <footer className="text-purple-400 font-bold uppercase tracking-widest text-xs">{content.final_cta.testimonial.author}</footer>
                                 </blockquote>
 
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <PrimaryButton
-                                        href="https://pay.hotmart.com/tulio-mentoria"
+                                        href={content.final_cta.links.checkout}
                                         icon
-                                        className="text-lg px-10 py-5 shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all"
+                                        variant="purple"
+                                        className="text-lg px-10 py-5"
                                     >
-                                        Garantir Minha Vaga Agora
+                                        {content.final_cta.buttons.primary}
                                     </PrimaryButton>
                                     <SecondaryButton onClick={openChatWidget} className="text-lg px-10 py-5">
-                                        Falar com um Especialista
+                                        {content.final_cta.buttons.secondary}
                                     </SecondaryButton>
                                 </div>
 
                                 <p className="text-slate-500 text-sm mt-8 flex items-center justify-center gap-2 font-medium">
-                                    🔒 Pagamento 100% seguro • Garantia de 7 dias
+                                    {content.final_cta.offer.secure_label}
                                 </p>
                             </ScrollReveal>
                         </div>
@@ -533,11 +549,11 @@ function MentoriaIA() {
                 </Section>
 
                 {/* ========== FOOTER ========== */}
-                <Footer accentColor="cyan" />
+                <Footer accentColor="purple" />
 
             </main>
         </div>
     )
 }
 
-export default MentoriaIA
+export default MentoriaJovana
