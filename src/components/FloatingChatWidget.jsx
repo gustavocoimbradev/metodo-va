@@ -13,7 +13,8 @@ export const FloatingChatWidget = ({
     mentorName = "Equipe V&A",
     mentorImage = null,
     customMessages = null,
-    themeColor = "blue"
+    themeColor = "blue",
+    customBottom = "bottom-24"
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([]);
@@ -139,7 +140,7 @@ export const FloatingChatWidget = ({
     }, [isOpen, customMessages]);
 
     return (
-        <div className="fixed bottom-24 right-8 z-50 flex flex-col items-end gap-4">
+        <div className={`fixed ${customBottom} right-8 z-50 flex flex-col items-end gap-4`}>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div

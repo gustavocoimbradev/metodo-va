@@ -110,7 +110,7 @@ export default function HomePage() {
                 style={{ scaleX }}
             />
 
-            <FloatingChatWidget />
+            <FloatingChatWidget customBottom="bottom-8" />
 
             <AnimatePresence mode="wait">
                 {loading && <Preloader onComplete={() => setLoading(false)} />}
