@@ -1,12 +1,12 @@
 {
     "hero": {
-        "badge": "Gestão de Escritório",
+        "badge": "Gestão Legal",
         "header": "Método V&A • Com Jovana Arantes",
         "title": {
-            "prefix": "Tenha um Escritório",
-            "highlight": "Previsível e Lucrativo"
+            "prefix": "A Revolução da",
+            "highlight": "Gestão de Escritório"
         },
-        "description": "Chega de viver apagando incêndios. Aprenda a construir uma máquina de crescimento — com processos claros, equipe alinhada e resultados consistentes mês após mês.",
+        "description": "Transforme seu escritório em uma empresa lucrativa e organizada. Domine a gestão de pessoas, processos e financeiro para escalar com segurança.",
         "buttons": {
             "primary": "Quero Me Inscrever",
             "secondary": "Falar com Jovana"
@@ -15,206 +15,279 @@
     "mentor": {
         "badge": "Sua Mentora",
         "name": "Jovana Arantes",
-        "role": "Gestora e Especialista em Direito do Trabalho",
-        "description": "Gestora responsável pela organização do escritório Viana & Arantes. Especialista em transformar o caos em sistemas eficientes, com domínio prático em gestão de equipes, processos e indicadores.",
-        "quote": "\"Minha mentoria ensina advogados a estruturarem seus escritórios como verdadeiras empresas de alto desempenho — com rotinas claras, padrões de excelência e crescimento previsível.\"",
+        "role": "Sócia do Viana & Arantes e Especialista em Gestão Jurídica",
+        "bio": "Advogada e sócia fundadora. Responsável pela estruturação administrativa e financeira que permitiu ao escritório escalar de Varginha para o Brasil.",
+        "quote": "\"Advogar é apenas parte do trabalho; gerir é o que garante o futuro do seu escritório.\"",
         "tags": [
-            "Gestão & Especialista Laboral",
-            "Organização Premium"
-        ]
+            "Especialista em Gestão",
+            "Sócia Viana & Arantes"
+        ],
+        "instagram": "https://www.instagram.com/jovanaarantes/"
     },
     "mastery": {
-        "badge": "Conhecimento Prático",
+        "badge": "Conteúdo Programático",
         "title": {
             "prefix": "O Que Você Vai",
-            "highlight": "Dominar"
+            "highlight": "Aprender"
         },
-        "description": "Uma transformação completa de carreira para levar seu escritório ao próximo nível através de método, trabalho e determinação.",
-        "quote_box": "\"Esta mentoria transforma escritórios 'apertados' e desorganizados em operações empresariais de verdade — prontas para escalar.\"",
+        "description": "Do caos à organização: o passo a passo para profissionalizar sua gestão.",
         "cards": [
             {
-                "title": "Processos e Padrão de Atendimento",
-                "description": "Crie sistemas que funcionam mesmo sem você, garantindo qualidade em cada interação.",
+                "icon": "Briefcase",
+                "title": "Gestão Administrativa",
+                "description": "Organize a casa e defina processos claros.",
                 "items": [
-                    "Mapeamento de jornada do cliente",
-                    "Padrão de atendimento premium",
-                    "Rotinas operacionais claras",
-                    "Segurança jurídica nos prazos"
+                    "Organigrama funcional",
+                    "Fluxos de trabalho",
+                    "Procedimentos padrão",
+                    "Gestão do tempo"
                 ]
             },
             {
-                "title": "Rotina de Gestão e Indicadores",
-                "description": "Aprenda a ler os números do seu escritório e tomar decisões baseadas em dados reais.",
+                "icon": "Users",
+                "title": "Gestão de Pessoas",
+                "description": "Contrate, treine e retenha os melhores talentos.",
                 "items": [
-                    "Controle de fluxo de caixa",
-                    "Precificação estratégica",
-                    "Gestão tributária e impostas",
-                    "Painel de indicadores gerenciais"
+                    "Recrutamento e seleção",
+                    "Plano de carreira",
+                    "Cultura organizacional",
+                    "Feedback e liderança"
                 ]
             },
             {
-                "title": "Organização de Equipe e Funções",
-                "description": "Monte um time de alta performance com papéis claros e responsabilidades definidas.",
+                "icon": "TrendingUp",
+                "title": "Gestão Financeira",
+                "description": "Tenha controle total sobre o dinheiro do escritório.",
                 "items": [
-                    "Contratação de associados",
-                    "Integração de novos colaboradores",
-                    "Definição de cargos e funções (KPIs)",
-                    "Cultura de responsabilidade"
+                    "Precificação de honorários",
+                    "Fluxo de caixa",
+                    "Separação PF x PJ",
+                    "Indicadores financeiros"
                 ]
             },
             {
-                "title": "Crescimento com Previsibilidade",
-                "description": "Expanda seu escritório de forma estruturada, sustentável e lucrativa.",
+                "icon": "Target",
+                "title": "Planejamento Estratégico",
+                "description": "Defina onde você quer chegar e como.",
                 "items": [
-                    "Controller jurídico e sistemas",
-                    "Escala sem perda de qualidade",
-                    "Gargalos ocultos na operação",
-                    "Visão estratégica do negócio"
+                    "Metas de curto e longo prazo",
+                    "Posicionamento de mercado",
+                    "Análise SWOT",
+                    "Plano de ação"
                 ]
+            }
+        ],
+        "bottom_quote": "\"Não existe escritório grande com mentalidade pequena.\""
+    },
+    "how_it_works": [
+        {
+            "icon": "PlayCircle",
+            "title": "Encontros Ao Vivo",
+            "description": "Aulas interativas para tirar dúvidas e analisar casos reais."
+        },
+        {
+            "icon": "MessageCircle",
+            "title": "Comunidade Exclusiva",
+            "description": "Networking com outros advogados gestores."
+        },
+        {
+            "icon": "Download",
+            "title": "Ferramentas Práticas",
+            "description": "Planilhas, modelos de contratos e checklists de gestão."
+        }
+    ],
+    "problem": {
+        "title": "Dores da Gestão (Cenário Atual)",
+        "items": [
+            "Mistura as contas pessoais com as do escritório?",
+            "Sente que sua equipe não engaja?",
+            "Não sabe precificar e paga para trabalhar?",
+            "Vive apagando incêndios administrativos?"
+        ]
+    },
+    "solution": {
+        "title": "A Solução V&A",
+        "items": [
+            "Tenha clareza financeira absoluta",
+            "Construa uma equipe autogerenciável",
+            "Precifique com lucro real e previsibilidade",
+            "Tenha tempo para ser estratégico"
+        ]
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Serve para autônomos?",
+                "answer": "Sim! A gestão começa quando você é 'eu-quipe'. Preparar o terreno é essencial para crescer."
+            },
+            {
+                "question": "Preciso entender de contabilidade?",
+                "answer": "Não. Você vai aprender a gestão financeira prática para advogados, não contabilidade técnica."
+            },
+            {
+                "question": "Como funcionam os encontros?",
+                "answer": "São online e ao vivo, com espaço para perguntas e estudos de caso."
+            },
+            {
+                "question": "Tem suporte?",
+                "answer": "Sim, via comunidade exclusiva e plataforma de aulas."
             }
         ]
     },
     "audience": {
-        "badge": "Para Quem é Esta Mentoria",
+        "badge": "Perfil Ideal",
         "title": {
             "prefix": "Esta Mentoria é Para",
-            "highlight": "Você Se:"
+            "highlight": "Você"
         },
-        "target_cards": [
+        "description": "Para quem quer deixar de ser apenas advogado e se tornar empresário jurídico.",
+        "cards": [
             {
-                "title": "Quer faturamento milionário",
-                "description": "Sem mágica, sem atalhos — apenas trabalho estruturado e execução impecável com o Método V&A."
+                "icon": "User",
+                "title": "Advogado Autônomo",
+                "description": "Que quer se organizar para começar a crescer do jeito certo.",
+                "isPositive": true
             },
             {
-                "title": "Busca crescer com previsibilidade",
-                "description": "Escritórios que desejam expandir de forma organizada, sustentável e com resultados mensuráveis."
+                "icon": "Building",
+                "title": "Sócio de Escritório",
+                "description": "Que sente que a administração está travando o crescimento.",
+                "isPositive": true
             },
             {
-                "title": "Quer organização total",
-                "description": "Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência."
-            },
-            {
-                "title": "Deseja produtividade real",
-                "description": "Implementar um sistema concreto e aplicável que libere o sócio para focar no que realmente importa."
+                "icon": "TrendingUp",
+                "title": "Em fase de Expansão",
+                "description": "Que precisa estruturar processos para controlar o aumento de demanda.",
+                "isPositive": true
             }
         ],
         "not_for_you": {
-            "title": "Atenção: Essa mentoria não é para você, se:",
-            "subtitle": "Seja honesto consigo mesmo antes de seguir em frente.",
-            "warning": "O Método V&A é para advogados sérios, comprometidos e determinados a transformar suas carreiras.",
+            "title": "Não é para você se:",
+            "subtitle": "Alinhamento",
             "cards": [
                 {
-                    "title": "Busca \"atalho mágico\"",
-                    "description": "Se acredita em fórmulas milagrosas que prometem resultados sem esforço, esta mentoria não é para você."
+                    "title": "Quer amadorismo",
+                    "description": "Se acha que organizar o escritório é 'burocracia desnecessária'.",
+                    "isPositive": false
                 },
                 {
-                    "title": "Não quer implementar",
-                    "description": "Nosso método funciona apenas para quem está disposto a implementar, testar, ajustar e persistir."
+                    "title": "Não quer liderar",
+                    "description": "Gestão exige assumir a responsabilidade pelos resultados.",
+                    "isPositive": false
                 },
                 {
-                    "title": "Quer apenas teoria",
-                    "description": "Se procura conteúdo genérico e superficial, há opções mais baratas. Nossa mentoria é prática e profunda."
-                },
-                {
-                    "title": "Sucesso antes do trabalho",
-                    "description": "No dicionário sucesso vem antes de trabalho. Na vida real, é exatamente o oposto."
+                    "title": "Espera milagre",
+                    "description": "Organização dá trabalho antes de dar lucro.",
+                    "isPositive": false
                 }
-            ]
+            ],
+            "footer_text": "Gestão é o alicerce do crescimento sustentável."
         }
     },
-    "results": {
-        "badge": "Autoridade Comprovada",
-        "title": {
-            "prefix": "Escritório Viana & Arantes",
-            "highlight": "Resultados de Elite"
-        },
-        "description": "Saímos do zero para nos consolidar como referência nacional. Nossa operação milionária é a prova viva de que o método funciona.",
-        "highlights": [
+    "deliverables": {
+        "authority_text": "O Viana & Arantes não cresceu por sorte. Cresceu com processos, indicadores e gestão eficiente. É essa a 'caixa preta' que vamos abrir para você.",
+        "cards": [
             {
-                "title": "Faturamento Milionário",
-                "description": "Operação de alto desempenho com faturamento real e lucro líquido consistente."
+                "title": "Encontros de Mentoria",
+                "description": "Aulas ao vivo focadas nos pilares da gestão jurídica"
             },
             {
-                "title": "Estrutura Própria",
-                "description": "Mais de 15 colaboradores e sede própria gerenciada com excelência."
+                "title": "Kit de Ferramentas",
+                "description": "Planilhas financeiras, modelos de contratos e RH"
+            },
+            {
+                "title": "Diagnóstico Inicial",
+                "description": "Entenda o momento atual do seu escritório para agir certo"
+            }
+        ]
+    },
+    "results": {
+        "badge": "Impacto",
+        "title": {
+            "prefix": "Resultados",
+            "highlight": "Esperados"
+        },
+        "description": "O que acontece quando você profissionaliza sua gestão.",
+        "cards": [
+            {
+                "icon": "DollarSign",
+                "title": "Lucratividade Real",
+                "description": "Pare de perder dinheiro em processos ineficientes."
+            },
+            {
+                "icon": "Smile",
+                "title": "Equipe Engajada",
+                "description": "Pessoas certas nos lugares certos, produzindo mais."
             }
         ],
         "stats": [
             {
-                "value": 1500,
-                "label": "Processos Judiciais",
+                "value": 100,
+                "label": "Controle",
+                "suffix": "%"
+            },
+            {
+                "value": 30,
+                "label": "Mais Lucro",
+                "suffix": "%"
+            },
+            {
+                "value": 10,
+                "label": "Horas/sem Salvas",
                 "suffix": "+"
             },
             {
-                "value": 700,
-                "label": "5 estrelas no Google",
-                "suffix": "+"
-            },
-            {
-                "value": 15,
-                "label": "Colaboradores",
-                "suffix": "+"
-            },
-            {
-                "value": "∞",
-                "label": "Crescimento Previsível",
+                "value": 0,
+                "label": "Surpresas Ruins",
                 "suffix": ""
             }
         ]
     },
-    "final_cta": {
-        "badge": "Inscrições Abertas",
+    "cta": {
+        "badge": "Oportunidade",
         "title": {
-            "prefix": "Assuma o Controle",
-            "highlight": "Empresarial do seu Escritório"
+            "prefix": "Profissionalize seu",
+            "highlight": "Escritório"
         },
-        "offer": {
-            "expires_label": "Esta oferta expira em:",
-            "old_price": "R$ 5.997,00",
-            "discount_badge": "33% OFF",
-            "price": "R$ 3.997",
+        "expires_label": "Vagas limitadas:",
+        "pricing": {
+            "old": "R$ 0.000",
+            "discount": "",
+            "current": "R$ 0.000",
             "cents": ",00",
-            "installments": "ou em até 12x de",
-            "installment_value": "R$ 399,08",
-            "secure_label": "🔒 Pagamento 100% seguro • Garantia de 7 dias"
+            "installments_text": "ou 12x de",
+            "installment_value": "R$ 000,00"
         },
-        "testimonial": {
-            "text": "\"Eu sou a prova de que a gestão transforma destinos. O Método V&A não entrega motivação, entrega estrutura para quem quer construir algo extraordinário.\"",
+        "quote": {
+            "text": "\"Seu escritório é uma empresa. Trate-o como tal.\"",
             "author": "— Jovana Arantes"
         },
         "buttons": {
-            "primary": "Garantir Minha Vaga Agora",
-            "secondary": "Falar com um Especialista"
+            "primary": "Garantir Minha Vaga",
+            "secondary": "Tirar Dúvidas"
         },
         "links": {
-            "checkout": "https://pay.hotmart.com/jovana-mentoria"
-        }
-    },
-    "footer": {
-        "copyright": "© 2024 Método V&A. Todos os direitos reservados.",
-        "developer_text": "Feito com 💜 por",
-        "developer_link": "Insiderblue"
+            "checkout": "https://pay.kiwify.com.br/placeholder"
+        },
+        "secure_label": "🔒 Pagamento seguro"
     },
     "chat": {
         "mentor_name": "Jovana Arantes",
         "custom_messages": {
             "initial": [
                 {
-                    "text": "Olá! Sou Jovana Arantes. Tudo bem? 👋"
+                    "text": "Olá! Jovana Arantes aqui."
                 },
                 {
-                    "text": "Vi que você tem interesse em organizar e crescer seu escritório. Quer saber como o Método V&A pode te ajudar?"
+                    "text": "Vamos organizar a casa e fazer seu escritório crescer?"
                 }
             ],
             "followUp": [
                 {
-                    "text": "Na minha mentoria, focamos em Gestão, Pessoas e Financeiro."
+                    "text": "Gestão é liberdade. Conte comigo."
                 },
                 {
-                    "text": "Você sente que seu escritório depende 100% de você hoje?"
-                },
-                {
-                    "text": "Vamos conversar para eu entender seu momento atual! 👇"
+                    "text": "Tem alguma dúvida sobre a mentoria?"
                 }
             ]
         }

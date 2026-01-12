@@ -47,13 +47,16 @@ export const ScrollReveal = ({
         }
     };
 
+    // Customize duration for desktop if 'smooth' requested or just globally smoother
+    const finalDuration = isMobile ? duration : (duration * 1.5); // 50% slower on desktop for smoothness
+
     return (
         <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
             variants={variants[animation] || variants["fade-up"]}
-            transition={{ duration, delay, ease: "easeOut" }}
+            transition={{ duration: finalDuration, delay, ease: [0.25, 0.1, 0.25, 1.0] }} // cubic-bezier for smoother feel
             className={className}
         >
             {children}

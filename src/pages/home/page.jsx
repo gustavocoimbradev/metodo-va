@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion'
-import { Rocket, Check, X, Brain, LayoutDashboard, ArrowRight, ShieldCheck, TrendingUp, Users, Scale, FileText, Globe, ChevronDown, Award } from 'lucide-react'
+import { Rocket, Check, X, Brain, LayoutDashboard, ArrowRight, ShieldCheck, TrendingUp, Users, Scale, FileText, Globe, ChevronDown, Award, Instagram } from 'lucide-react'
 import { BlurReveal } from '../../components/BlurReveal'
 import { ScrollReveal } from '../../components/ScrollReveal'
 import { FloatingChatWidget } from '../../components/FloatingChatWidget'
@@ -488,10 +488,22 @@ export default function HomePage() {
                                             <p dangerouslySetInnerHTML={{ __html: content.history.paragraphs[1] }} />
                                         </ScrollReveal>
                                     </div>
-                                    <ScrollReveal animation="blur-up" delay={0.3}>
-                                        <div className="border-l-4 border-indigo-500 pl-6 py-4 bg-indigo-950/20 italic text-slate-400">
-                                            {content.history.quote}
-                                        </div>
+
+                                    <ScrollReveal animation="blur-up" delay={0.4}>
+                                        <a
+                                            href="https://www.instagram.com/metodovianaearantes/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600/10 to-pink-600/10 hover:from-purple-600 hover:to-pink-600 border border-purple-500/20 hover:border-transparent transition-all duration-300 group"
+                                        >
+                                            <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg group-hover:bg-white/20 transition-colors">
+                                                <Instagram className="w-5 h-5 text-white" />
+                                            </div>
+                                            <div>
+                                                <span className="block text-xs font-bold text-slate-400 group-hover:text-purple-100 uppercase tracking-wider">Acompanhe no</span>
+                                                <span className="block text-sm font-bold text-white">Instagram Oficial</span>
+                                            </div>
+                                        </a>
                                     </ScrollReveal>
                                 </div>
                                 <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4] group">
@@ -633,6 +645,6 @@ export default function HomePage() {
 
                 <Footer accentColor="blue" />
             </main>
-        </div>
+        </div >
     )
 }

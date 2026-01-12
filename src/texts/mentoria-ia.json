@@ -3,10 +3,10 @@
         "badge": "IA para Advocacia",
         "header": "Método V&A • Com Túlio Viana",
         "title": {
-            "prefix": "Impulsione seu Escritório",
-            "highlight": "usando IA"
+            "prefix": "A Revolução da",
+            "highlight": "Advocacia com IA"
         },
-        "description": "A IA não é o futuro — é o presente para quem quer competir no mais alto nível. Aprenda a usar inteligência artificial para produzir 10x mais com qualidade superior.",
+        "description": "Produtividade, Padronização e Escala. Sem improviso e sem mágica. Domine as ferramentas de Inteligência Artificial que estão revolucionando a advocacia e aprenda a treinar a IA para pensar como você.",
         "buttons": {
             "primary": "Quero Me Inscrever",
             "secondary": "Falar com Túlio"
@@ -15,222 +15,290 @@
     "mentor": {
         "badge": "Seu Mentor",
         "name": "Túlio Viana",
-        "role": "Especialista em Inteligência Artificial e Direito do Trabalho",
-        "bio": "Túlio é pioneiro na aplicação de IA na advocacia brasileira. Ele revolucionou a forma como o escritório produz conteúdo, atende clientes e escala resultados — tudo com inteligência artificial.",
-        "quote": "\"Minha mentoria ensina advogados a rodarem seus escritórios 100% em IA, multiplicando produtividade sem perder qualidade, segurança ou personalização no atendimento.\"",
+        "role": "Sócio do Viana & Arantes e Especialista em IA Jurídica",
+        "bio": "Advogado e sócio fundador do escritório Viana & Arantes. Pioneiro na implementação de tecnologias de Inteligência Artificial Generativa na rotina jurídica, transformando a produtividade e a escala de seu escritório.",
+        "quote": "\"Não é sobre substituir o advogado, é sobre libertá-lo do trabalho braçal para focar no que realmente importa: a estratégia.\"",
         "tags": [
-            "Pioneiro em IA Jurídica",
-            "Escala Sem Barreiras"
-        ]
+            "Pioneiro em IA",
+            "Sócio Viana & Arantes"
+        ],
+        "instagram": "https://www.instagram.com/tuliofviana/"
     },
     "mastery": {
-        "badge": "Conhecimento Prático",
+        "badge": "Conteúdo Programático",
         "title": {
             "prefix": "O Que Você Vai",
-            "highlight": "Dominar"
+            "highlight": "Aprender"
         },
-        "description": "Uso prático de IA para produzir mais, com mais qualidade e consistência — sem perder segurança e método.",
+        "description": "Do zero ao avançado: um caminho estruturado para implementar a IA no seu dia a dia jurídico.",
         "cards": [
             {
-                "icon": "FileSearch",
-                "title": "IA Aplicada a Conteúdo e Produção",
-                "description": "Gere petições, contratos, pareceres e conteúdos de marketing com velocidade e precisão.",
+                "icon": "Brain",
+                "title": "Fundamentos da IA Generativa",
+                "description": "Entenda os conceitos base e o novo mercado jurídico com IA.",
                 "items": [
-                    "Petições iniciais e contestações",
-                    "Impugnações e recursos com um clique",
-                    "Pareceres técnicos aprofundados",
-                    "Conteúdo de marketing instantâneo"
+                    "O novo mercado jurídico",
+                    "Lógica das IAs Generativas",
+                    "Segurança de dados",
+                    "Ética no uso da IA"
                 ]
             },
             {
-                "icon": "Sparkles",
-                "title": "Padronização e Velocidade",
-                "description": "Crie templates inteligentes que mantêm qualidade enquanto aceleram entregas.",
+                "icon": "MessageSquare",
+                "title": "Engenharia de Prompts",
+                "description": "Aprenda o segredo para extrair o melhor do ChatGPT e Claude.",
                 "items": [
-                    "Templates inteligentes e dinâmicos",
-                    "Redução drástica de erros humanos",
-                    "Padronização de escrita do sócio",
-                    "Alta velocidade sem perda de rigor"
+                    "Estrutura de prompts eficientes",
+                    "Contexto e Personas",
+                    "Evitando alucinações",
+                    "Refinamento de respostas"
                 ]
             },
             {
-                "icon": "Settings",
-                "title": "Templates e Fluxos de Trabalho",
-                "description": "Automatize tarefas repetitivas e libere tempo para o que realmente importa.",
+                "icon": "FileText",
+                "title": "Revisão e Análise",
+                "description": "Use a IA para analisar contratos, peças e documentos complexos.",
                 "items": [
-                    "IA no dia a dia do advogado",
-                    "Eliminação de tarefas burocráticas",
-                    "Fluxos de produção otimizados",
-                    "Automação de rotinas repetitivas"
+                    "Análise contratual rápida",
+                    "Revisão de peças processuais",
+                    "Síntese de documentos",
+                    "Identificação de riscos"
                 ]
             },
             {
-                "icon": "Users",
-                "title": "Produtividade e Escala do Time",
-                "description": "Faça sua equipe produzir mais sem trabalhar mais — com ferramentas de IA integradas.",
+                "icon": "Share2",
+                "title": "Marketing Jurídico",
+                "description": "Produção de conteúdo em escala para atrair mais clientes.",
                 "items": [
-                    "Multiplicação da força produtiva",
-                    "Custos reduzidos em até 80%",
-                    "Produção 10x superior comprovada",
-                    "Escritório rodando 100% com IA"
+                    "Ideias infinitas de conteúdo",
+                    "Roteiros para vídeos",
+                    "Artigos para blog e LinkedIn",
+                    "Adaptação de linguagem"
                 ]
             }
         ],
-        "bottom_quote": "\"Esta mentoria leva seu escritório para a era da inteligência artificial — onde produtividade e qualidade não são mais trade-offs.\""
+        "bottom_quote": "\"Domine a IA ou seja dominado por quem domina.\""
+    },
+    "how_it_works": [
+        {
+            "icon": "PlayCircle",
+            "title": "Encontros Ao Vivo",
+            "description": "Aulas síncronas para aprofundamento e prática guiada."
+        },
+        {
+            "icon": "MessageCircle",
+            "title": "Community & Networking",
+            "description": "Grupo exclusivo para troca de experiências e networking."
+        },
+        {
+            "icon": "Download",
+            "title": "Materiais Exclusivos",
+            "description": "Acesso a prompts, templates e materiais de apoio."
+        }
+    ],
+    "problem": {
+        "title": "O Cenário Atual (Dores)",
+        "items": [
+            "Perde horas com tarefas repetitivas e manuais?",
+            "Tem dificuldade em manter padrão de qualidade na equipe?",
+            "Sente que não consegue escalar seu escritório?",
+            "Fica refém de prazos e apaga incêndios todo dia?"
+        ]
+    },
+    "solution": {
+        "title": "O Que Este Método Resolve",
+        "items": [
+            "Multiplique sua força de trabalho sem aumentar custos",
+            "Padronize a qualidade técnica de todas as peças",
+            "Automatize o trabalho braçal e foque na estratégia",
+            "Ganhe velocidade sem perder a personalização"
+        ]
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Preciso ser \"bom de tecnologia\"?",
+                "answer": "Não. Você precisa ser bom de execução. A mentoria é prática e guiada."
+            },
+            {
+                "question": "Isso serve para escritório pequeno?",
+                "answer": "Sim — e geralmente é onde a IA faz mais diferença, porque tempo e equipe são limitados."
+            },
+            {
+                "question": "Vou \"rodar o escritório 100% em IA\"?",
+                "answer": "Você vai aprender a construir um escritório em que IA entra como motor de produtividade e padrão, sem perder controle e qualidade."
+            },
+            {
+                "question": "Como faço a inscrição?",
+                "answer": "Pelo botão abaixo (Kiwify)."
+            }
+        ]
     },
     "audience": {
-        "badge": "Para Quem é Esta Mentoria",
+        "badge": "Perfil Ideal",
         "title": {
             "prefix": "Esta Mentoria é Para",
-            "highlight": "Você Se:"
+            "highlight": "Você"
         },
-        "target_cards": [
+        "description": "Focada em profissionais que buscam eficiência máxima.",
+        "cards": [
             {
-                "icon": "Landmark",
-                "title": "Quer faturamento milionário",
-                "description": "Sem mágica, sem atalhos — apenas trabalho estruturado e execução impecável com o Método V&A.",
+                "icon": "Clock",
+                "title": "Quer Ganhar Tempo",
+                "description": "Advogados que estão cansados de perder horas em tarefas que poderiam ser automatizadas.",
                 "isPositive": true
             },
             {
                 "icon": "TrendingUp",
-                "title": "Busca crescer com previsibilidade",
-                "description": "Escritórios que desejam expandir de forma organizada, sustentável e com resultados mensuráveis.",
+                "title": "Busca Eficiência",
+                "description": "Escritórios que buscam otimizar recursos e fazer mais com menos.",
                 "isPositive": true
             },
             {
-                "icon": "BarChart3",
-                "title": "Quer organização total",
-                "description": "Transformar rotina caótica em processos claros, time alinhado e atendimento padronizado de excelência.",
+                "icon": "Zap",
+                "title": "Quer Sair do Operacional",
+                "description": "Profissionais que querem focar na estratégia jurídica e no cliente.",
                 "isPositive": true
             },
             {
-                "icon": "Brain",
-                "title": "Deseja produtividade com IA",
-                "description": "Usar inteligência artificial para ganhar tempo, produzir 10x mais e manter padrão de qualidade elevado.",
+                "icon": "Rocket",
+                "title": "Quer Escalar",
+                "description": "Quem deseja crescer o escritório de forma sustentável e moderna.",
                 "isPositive": true
             }
         ],
         "not_for_you": {
-            "title": "Atenção: Essa mentoria não é para você, se:",
-            "subtitle": "Seja honesto consigo mesmo antes de seguir em frente.",
+            "title": "Não é para você se:",
+            "subtitle": "Alinhamento de expectativas",
             "cards": [
                 {
-                    "title": "Busca \"atalho mágico\"",
-                    "description": "Se você acredita em fórmulas milagrosas que prometem resultados sem esforço, esta mentoria não é para você.",
+                    "title": "Busca Botão Mágico",
+                    "description": "Se acha que a IA vai fazer tudo sozinha sem sua supervisão técnica.",
                     "isPositive": false
                 },
                 {
-                    "title": "Não quer implementar",
-                    "description": "Nosso método funciona apenas para quem está disposto a implementar, testar, ajustar e persistir.",
+                    "title": "Não quer estudar",
+                    "description": "É preciso dedicar tempo para aprender a 'conversar' com a IA.",
                     "isPositive": false
                 },
                 {
-                    "title": "Quer apenas teoria",
-                    "description": "Se procura conteúdo genérico e superficial, há opções mais baratas. Nossa mentoria é prática e profunda.",
+                    "title": "Resiste à tecnologia",
+                    "description": "Se você acredita que métodos manuais antigos são insuperáveis.",
                     "isPositive": false
                 },
                 {
-                    "title": "Sucesso antes do trabalho",
-                    "description": "No dicionário sucesso vem antes de trabalho. Na vida real, é exatamente o oposto.",
+                    "title": "Não preza qualidade",
+                    "description": "A IA potencializa o bom profissional, mas não salva o mau profissional.",
                     "isPositive": false
                 }
             ],
-            "footer_text": "O Método V&A é para advogados sérios, comprometidos e determinados a transformar suas carreiras."
+            "footer_text": "A IA é uma ferramenta de potencialização, não de milagre."
         }
     },
+    "deliverables": {
+        "authority_text": "Essa mentoria nasce da experiência real do Viana & Arantes Advocacia, escritório que começou em Varginha/MG e hoje opera com faturamento milionário, mais de 15 colaboradores, sede própria, mais de 1.500 processos e mais de 700 avaliações 5 estrelas no Google.",
+        "cards": [
+            {
+                "title": "6 encontros ao vivo",
+                "description": "Mentoria em grupo com aplicação prática no seu dia a dia"
+            },
+            {
+                "title": "1 chamada individual",
+                "description": "Para mapear suas dores e corrigir pontos críticos do seu escritório com IA"
+            },
+            {
+                "title": "Direcionamento completo",
+                "description": "Transformar IA em rotina, padrão e resultado, não em \"tentativa e erro\""
+            }
+        ]
+    },
     "results": {
-        "badge": "Impacto Real",
+        "badge": "Autoridade",
         "title": {
-            "prefix": "Escritório Viana & Arantes",
-            "highlight": "Autoridade Comprovada"
+            "prefix": "Resultados",
+            "highlight": "Comprovados"
         },
-        "description": "Somos o escritório que saiu do zero e se consolidou como uma referência nacional no Direito do Trabalho, com faturamento milionário e excelência operacional.",
+        "description": "A metodologia aplicada no Viana & Arantes, agora disponível para você.",
         "cards": [
             {
                 "icon": "Zap",
-                "title": "Produtividade 10x",
-                "description": "Nossa equipe produz em escala industrial com qualidade artesanal através do uso inteligente de IA."
+                "title": "Velocidade Extrema",
+                "description": "Redução drástica no tempo de elaboração de minuta."
             },
             {
-                "icon": "Briefcase",
-                "title": "Escritório Milionário",
-                "description": "Mais de 15 colaboradores diretos e sede própria operada com tecnologia de ponta."
+                "icon": "CheckCircle",
+                "title": "Qualidade Padrão",
+                "description": "Eliminação de erros básicos e padronização da linguagem do escritório."
             }
         ],
         "stats": [
             {
-                "value": 1500,
-                "label": "Processos Ativos",
-                "suffix": "+"
-            },
-            {
-                "value": 700,
-                "label": "5 estrelas no Google",
-                "suffix": "+"
-            },
-            {
-                "value": 15,
-                "label": "Colaboradores",
-                "suffix": "+"
-            },
-            {
                 "value": 10,
-                "label": "Aumento de Velocidade",
+                "label": "Velocidade",
                 "suffix": "x"
+            },
+            {
+                "value": 80,
+                "label": "Redução de Custos",
+                "suffix": "%"
+            },
+            {
+                "value": 100,
+                "label": "Foco Estratégico",
+                "suffix": "%"
+            },
+            {
+                "value": 6,
+                "label": "Encontros Práticos",
+                "suffix": ""
             }
         ]
     },
     "cta": {
         "badge": "Inscrições Abertas",
         "title": {
-            "prefix": "Assuma a Liderança",
-            "highlight": "da era da Inteligência Artificial"
+            "prefix": "Comece sua Transformação",
+            "highlight": "Agora Mesmo"
         },
-        "expires_label": "Esta oferta expira em:",
+        "expires_label": "Oferta especial:",
         "pricing": {
-            "old": "R$ 5.997,00",
-            "discount": "33% OFF",
+            "old": "R$ 6.997",
+            "discount": "",
             "current": "R$ 3.997",
             "cents": ",00",
-            "installments_text": "ou em até 12x de",
-            "installment_value": "R$ 399,08"
+            "installments_text": "ou 12x de",
+            "installment_value": "R$ 399,70"
         },
         "quote": {
-            "text": "\"IA Jurídica reduz custos em até 80% e aumenta a produtividade em até 10 vezes. O Método V&A é estratégia comprovada por quem já construiu o sucesso.\"",
+            "text": "\"A tecnologia não retrocede. Quem sair na frente, lidera o mercado.\"",
             "author": "— Túlio Viana"
         },
         "buttons": {
-            "primary": "Garantir Minha Vaga Agora",
-            "secondary": "Falar com um Especialista"
+            "primary": "Garantir Minha Vaga",
+            "secondary": "Tirar Dúvidas"
         },
         "links": {
-            "checkout": "https://pay.hotmart.com/tulio-mentoria"
+            "checkout": "https://pay.kiwify.com.br/placeholder"
         },
-        "secure_label": "🔒 Pagamento 100% seguro • Garantia de 7 dias"
+        "secure_label": "🔒 Garantia incondicional de 7 dias"
     },
     "chat": {
         "mentor_name": "Túlio Viana",
         "custom_messages": {
             "initial": [
                 {
-                    "text": "Olá! Sou Túlio Viana. Vi que você está interessado na mentoria de IA para Advocacia! 🤖"
+                    "text": "Olá! Túlio Viana aqui. 👋"
                 },
                 {
-                    "text": "Quer saber como usar inteligência artificial para produzir 10x mais com qualidade no seu escritório?"
+                    "text": "Pronto para levar a advocacia do seu escritório para o futuro com IA?"
                 }
             ],
             "followUp": [
                 {
-                    "text": "Na mentoria, ensino como usar IA para criar petições, contratos e pareceres de forma rápida e precisa."
+                    "text": "Vamos dominar o ChatGPT e o Claude juntos."
                 },
                 {
-                    "text": "Você vai aprender a automatizar tarefas repetitivas e reduzir seus custos operacionais em até 80%."
-                },
-                {
-                    "text": "A mentoria é 100% prática. Nada de teoria vazia. Você vai sair aplicando no seu dia a dia!"
-                },
-                {
-                    "text": "Posso te explicar como rodar seu escritório 100% com IA. Vamos conversar? 💬"
+                    "text": "Posso te ajudar com alguma dúvida sobre o conteúdo programático?"
                 }
             ]
         }
