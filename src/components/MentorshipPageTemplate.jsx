@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, AnimatePresence, useMotionValueEvent } fr
 import {
     Brain, X, CheckCircle, Check, BookOpen, PlayCircle, MessageCircle,
     ChevronDown, ChevronUp, Users, Award, Star, ShieldCheck, Download, Instagram,
-    Video, Phone, Target
+    Video, Phone, Target, Cpu
 } from 'lucide-react'
 import { BlurReveal } from '../components/BlurReveal'
 import { ScrollReveal } from '../components/ScrollReveal'
@@ -376,7 +376,7 @@ export default function MentorshipPageTemplate({
                                 transition={isMobile ? { duration: 0 } : { delay: 2, duration: 0.8 }}
                                 className="flex flex-col sm:flex-row gap-4 pt-4"
                             >
-                                <PrimaryButton onClick={() => scrollToSection('inscricao')} icon variant={themeStyles.buttonVariant}>
+                                <PrimaryButton onClick={() => scrollToSection('inscricao-final')} icon variant={themeStyles.buttonVariant}>
                                     {content.hero.buttons.primary}
                                 </PrimaryButton>
                                 <SecondaryButton onClick={openChatWidget} variant={themeStyles.buttonVariant}>
@@ -477,7 +477,7 @@ export default function MentorshipPageTemplate({
                         <p className="text-xl text-slate-300 mb-8">
                             Resultados validados por <strong className="text-white">centenas de advogados</strong>.
                         </p>
-                        <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant} href={content.cta?.links?.checkout} className="mx-auto !w-fit !px-10 !py-3 !text-base">
+                        <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant} className="mx-auto !w-fit !px-10 !py-3 !text-base">
                             QUERO AVANÇAR AGORA
                         </PrimaryButton>
                     </ScrollReveal>
@@ -494,12 +494,12 @@ export default function MentorshipPageTemplate({
                         </h2>
                     </ScrollReveal>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-12">
+                    <div className="grid md:grid-cols-3 gap-6 mb-12">
                         {(content.mastery?.cards || []).map((item, idx) => (
                             <ScrollReveal key={idx} animation="fade-up" delay={idx * 0.1}>
                                 <div className={`bg-slate-900/40 border border-slate-700/50 ${themeStyles.cardBorderHover} p-8 rounded-2xl transition-all hover:bg-slate-800/60 h-full group`}>
                                     <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-6 transition-colors ${themeStyles.iconContainer}`}>
-                                        <CheckCircle className="w-5 h-5" />
+                                        {item.icon === 'Cpu' ? <Cpu className="w-5 h-5" /> : <CheckCircle className="w-5 h-5" />}
                                     </div>
                                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                                     <p className="text-slate-400 leading-relaxed font-light mb-4">{item.description || item.desc}</p>
@@ -520,10 +520,12 @@ export default function MentorshipPageTemplate({
                         ))}
                     </div>
 
-                    <div className="flex justify-center mt-12">
-                        <PrimaryButton href={content.cta?.links?.checkout} variant={themeStyles.buttonVariant}>
-                            VER CRONOGRAMA COMPLETO
-                        </PrimaryButton>
+                    <div className="flex justify-center mt-12 w-full">
+                        <ScrollReveal animation="fade-up">
+                            <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant}>
+                                QUERO ADQUIRIR AGORA
+                            </PrimaryButton>
+                        </ScrollReveal>
                     </div>
                 </Section>
 
@@ -570,7 +572,7 @@ export default function MentorshipPageTemplate({
                 <Section className="py-10">
                     <ScrollReveal animation="fade-up">
                         <div className="flex justify-center">
-                            <PrimaryButton href={content.cta?.links?.checkout} variant={themeStyles.buttonVariant}>
+                            <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant}>
                                 QUERO DESTRAVAR MEU ESCRITÓRIO
                             </PrimaryButton>
                         </div>
@@ -581,28 +583,30 @@ export default function MentorshipPageTemplate({
                 {content.calendar && content.calendar.length > 0 && (
                     <Section id="calendario">
                         <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-12">
-                            <div className="text-center mb-12">
+                            <ScrollReveal animation="blur-up" className="text-center mb-12">
                                 <h2 className="text-3xl font-bold text-white mb-4">Roteiro dos Encontros</h2>
                                 <p className="text-slate-400">Programe-se para não perder nada.</p>
-                            </div>
+                            </ScrollReveal>
 
                             <div className="space-y-4 max-w-3xl mx-auto">
                                 {content.calendar.map((item, idx) => (
-                                    <div key={idx} className={`flex items-center gap-6 p-6 rounded-xl bg-slate-950/50 border border-slate-800 ${themeStyles.cardBorderHover} transition-colors`}>
-                                        <div className="shrink-0 w-32 text-center">
-                                            <span className="block text-xl md:text-2xl font-bold text-white">{item.date}</span>
+                                    <ScrollReveal key={idx} animation="fade-up" delay={idx * 0.1}>
+                                        <div className={`flex items-center gap-6 p-6 rounded-xl bg-slate-950/50 border border-slate-800 ${themeStyles.cardBorderHover} transition-colors`}>
+                                            <div className="shrink-0 w-32 text-center">
+                                                <span className="block text-xl md:text-2xl font-bold text-white">{item.date}</span>
+                                            </div>
+                                            <div className="grow">
+                                                <h4 className="text-lg font-bold text-white">{item.title}</h4>
+                                            </div>
                                         </div>
-                                        <div className="grow">
-                                            <h4 className="text-lg font-bold text-white">{item.title}</h4>
-                                        </div>
-                                    </div>
+                                    </ScrollReveal>
                                 ))}
                             </div>
                         </div>
                         {/* ========== CTA AFTER CALENDAR ========== */}
                         <div className="flex justify-center mt-12">
                             <ScrollReveal animation="fade-up">
-                                <PrimaryButton href={content.cta?.links?.checkout} variant={themeStyles.buttonVariant}>
+                                <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant}>
                                     COMPRAR NA KIWIFY
                                 </PrimaryButton>
                             </ScrollReveal>
@@ -619,48 +623,64 @@ export default function MentorshipPageTemplate({
                         </h2>
                     </ScrollReveal>
 
-                    <div className="grid md:grid-cols-2 gap-12">
-                        {/* Positive Audience */}
-                        <div>
-                            <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
-                                <CheckCircle className={`w-6 h-6 ${themeStyles.checkIcon}`} />
-                                Para Quem É
-                            </h3>
-                            <div className="space-y-4">
-                                {(content.audience?.cards || []).map((item, idx) => (
-                                    <div key={idx} className={`p-6 rounded-2xl bg-slate-900/40 border border-slate-700/30 flex gap-4 ${item.isPositive === false ? 'opacity-50' : ''}`}>
-                                        <div className={`mt-1 shrink-0 w-8 h-8 rounded-full ${themeStyles.checkBg} flex items-center justify-center`}>
-                                            <Check className={`w-4 h-4 ${themeStyles.checkIcon}`} />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-white text-lg">{item.title}</h4>
-                                            <p className="text-slate-400 text-sm mt-1">{item.desc || item.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 mb-20">
+                        {/* Positive Audience Header */}
+                        <div className="order-1 md:order-none md:col-start-1">
+                            <ScrollReveal animation="slide-right">
+                                <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                                    <CheckCircle className={`w-6 h-6 ${themeStyles.checkIcon}`} />
+                                    Para Quem É
+                                </h3>
+                            </ScrollReveal>
                         </div>
 
-                        {/* Negative Audience */}
-                        <div>
-                            <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
-                                <X className="w-6 h-6 text-red-500" />
-                                Para Quem NÃO É
-                            </h3>
-                            <div className="space-y-4">
-                                {(content.audience?.not_for_you?.cards || []).map((item, idx) => (
-                                    <div key={idx} className="p-6 rounded-2xl bg-red-950/10 border border-red-500/30 flex gap-4 hover:bg-red-950/20 transition-all">
-                                        <div className="mt-1 shrink-0 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <X className="w-4 h-4 text-red-400" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-red-400 text-lg">{item.title}</h4>
-                                            <p className="text-red-200/70 text-sm mt-1">{item.desc || item.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                        {/* Negative Audience Header */}
+                        <div className="order-3 md:order-none md:col-start-2">
+                            <ScrollReveal animation="slide-left">
+                                <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                                    <X className="w-6 h-6 text-red-500" />
+                                    Para Quem NÃO É
+                                </h3>
+                            </ScrollReveal>
                         </div>
+
+                        {Array.from({ length: Math.max((content.audience?.cards || []).length, (content.audience?.not_for_you?.cards || []).length) }).map((_, idx) => {
+                            const itemPos = (content.audience?.cards || [])[idx];
+                            const itemNeg = (content.audience?.not_for_you?.cards || [])[idx];
+
+                            return [
+                                <div key={`aud-pos-${idx}`} className="order-2 md:order-none md:col-start-1 h-full">
+                                    {itemPos && (
+                                        <ScrollReveal animation="fade-up" delay={idx * 0.1}>
+                                            <div className={`p-6 rounded-2xl bg-slate-900/40 border border-slate-700/30 flex gap-4 h-full ${itemPos.isPositive === false ? 'opacity-50' : ''}`}>
+                                                <div className={`mt-1 shrink-0 w-8 h-8 rounded-full ${themeStyles.checkBg} flex items-center justify-center`}>
+                                                    <Check className={`w-4 h-4 ${themeStyles.checkIcon}`} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-white text-lg">{itemPos.title}</h4>
+                                                    <p className="text-slate-400 text-sm mt-1">{itemPos.desc || itemPos.description}</p>
+                                                </div>
+                                            </div>
+                                        </ScrollReveal>
+                                    )}
+                                </div>,
+                                <div key={`aud-neg-${idx}`} className="order-4 md:order-none md:col-start-2 h-full">
+                                    {itemNeg && (
+                                        <ScrollReveal animation="fade-up" delay={idx * 0.1}>
+                                            <div className="p-6 rounded-2xl bg-slate-900/40 border border-red-900/30 flex gap-4 h-full">
+                                                <div className="mt-1 shrink-0 w-8 h-8 rounded-full bg-red-950/20 border border-red-500/20 flex items-center justify-center">
+                                                    <X className="w-4 h-4 text-red-500" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-white text-lg">{itemNeg.title}</h4>
+                                                    <p className="text-slate-400 text-sm mt-1">{itemNeg.desc || itemNeg.description}</p>
+                                                </div>
+                                            </div>
+                                        </ScrollReveal>
+                                    )}
+                                </div>
+                            ];
+                        })}
                     </div>
                 </Section>
 
@@ -668,7 +688,7 @@ export default function MentorshipPageTemplate({
                 <Section className="py-10">
                     <ScrollReveal animation="fade-up">
                         <div className="flex justify-center">
-                            <PrimaryButton href={content.cta?.links?.checkout} variant={themeStyles.buttonVariant}>
+                            <PrimaryButton onClick={() => scrollToSection('inscricao-final')} variant={themeStyles.buttonVariant}>
                                 SIM, QUERO FAZER PARTE!
                             </PrimaryButton>
                         </div>
@@ -729,9 +749,9 @@ export default function MentorshipPageTemplate({
                 {/* ========== DELIVERABLES (WHAT YOU RECEIVE) ========== */}
                 {content.deliverables && (
                     <Section className="py-10">
-                        <ScrollReveal animation="fade-up">
-                            <div className="max-w-6xl mx-auto">
-                                {/* Prova de Autoridade Box */}
+                        <div className="max-w-6xl mx-auto">
+                            {/* Prova de Autoridade Box */}
+                            <ScrollReveal animation="fade-up">
                                 <div className={`${themeStyles.deliverablesBoxBg} rounded-t-2xl p-6 md:p-8 flex gap-4 border ${themeStyles.deliverablesBoxBorder} mb-8`}>
                                     <div className="shrink-0 mt-1">
                                         <div className={`w-6 h-6 rounded border ${themeStyles.deliverablesIconBorder} flex items-center justify-center`}>
@@ -745,12 +765,16 @@ export default function MentorshipPageTemplate({
                                         </p>
                                     </div>
                                 </div>
+                            </ScrollReveal>
 
+                            <ScrollReveal animation="fade-up" delay={0.2}>
                                 <h3 className="text-2xl font-bold text-white mb-8">O que você recebe</h3>
+                            </ScrollReveal>
 
-                                <div className="grid md:grid-cols-3 gap-6">
-                                    {(content.deliverables.cards || []).map((card, idx) => (
-                                        <div key={idx} className={`${themeStyles.deliverablesCardBg} border ${themeStyles.deliverablesCardBorder} rounded-2xl p-6 ${themeStyles.deliverablesCardBgHover} transition-colors`}>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {(content.deliverables.cards || []).map((card, idx) => (
+                                    <ScrollReveal key={idx} animation="fade-up" delay={0.3 + (idx * 0.1)}>
+                                        <div className={`${themeStyles.deliverablesCardBg} border ${themeStyles.deliverablesCardBorder} rounded-2xl p-6 ${themeStyles.deliverablesCardBgHover} transition-colors`}>
                                             <div className={`w-10 h-10 rounded-full ${themeStyles.deliverablesCardIconBg} flex items-center justify-center ${themeStyles.deliverablesCardIconColor} mb-4`}>
                                                 {/* Dynamic Icon Rendering could go here, simplifying for now */}
                                                 {idx === 0 ? <Video className="w-5 h-5" /> : idx === 1 ? <Phone className="w-5 h-5" /> : <Target className="w-5 h-5" />}
@@ -758,31 +782,32 @@ export default function MentorshipPageTemplate({
                                             <h4 className="text-xl font-bold text-white mb-2">{card.title}</h4>
                                             <p className="text-slate-400 text-sm leading-relaxed">{card.description}</p>
                                         </div>
-                                    ))}
-                                </div>
+                                    </ScrollReveal>
+                                ))}
                             </div>
-                        </ScrollReveal>
+                        </div>
                     </Section>
                 )}
 
                 {/* ========== FAQ ========== */}
                 <Section id="faq">
-                    <div className="text-center mb-16">
+                    <ScrollReveal animation="blur-up" className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Perguntas Frequentes</h2>
-                    </div>
+                    </ScrollReveal>
                     <div className="max-w-3xl mx-auto space-y-4">
                         {(content.faq?.items || [
                             { question: "Preciso saber de programação?", answer: "Não." },
                             { question: "Serve para qualquer área?", answer: "Sim." }
                         ]).map((item, idx) => (
-                            <FAQItem
-                                key={idx}
-                                question={item.question}
-                                answer={item.answer}
-                                themeStyles={themeStyles}
-                                isOpen={openFaqIndex === idx}
-                                onToggle={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                            />
+                            <ScrollReveal key={idx} animation="fade-up" delay={idx * 0.05}>
+                                <FAQItem
+                                    question={item.question}
+                                    answer={item.answer}
+                                    themeStyles={themeStyles}
+                                    isOpen={openFaqIndex === idx}
+                                    onToggle={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                                />
+                            </ScrollReveal>
                         ))}
                     </div>
                 </Section>
@@ -795,49 +820,51 @@ export default function MentorshipPageTemplate({
                     </div>
 
                     <div className="relative z-10 max-w-5xl mx-auto">
-                        <div className={`backdrop-blur-xl bg-slate-900/40 border-y md:border ${themeStyles.glassCardBorder} md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl overflow-hidden`}>
-                            <div className="relative z-10">
-                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                    Transforme seu Escritório <br /> <span className={themeStyles.textHighlight}>Ainda Hoje.</span>
-                                </h2>
-                                <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-                                    Não perca mais tempo com processos manuais. Junte-se aos advogados que estão liderando o mercado com IA.
-                                </p>
-
-                                <div className="flex justify-center mb-10 scale-90 md:scale-100">
-                                    <CountdownTimer countdownKey={countdownKey} themeStyles={themeStyles} />
-                                </div>
-
-                                {content.cta?.pricing && (
-                                    <div className="mb-10 text-center">
-                                        <div className="text-slate-400 line-through text-lg mb-2">{content.cta.pricing.old}</div>
-                                        <div className="flex items-center justify-center gap-2 mb-2">
-                                            <span className="text-4xl md:text-6xl font-black text-white">{content.cta.pricing.current}</span>
-                                            <span className="text-xl text-slate-400 top-0">{content.cta.pricing.cents}</span>
-                                        </div>
-                                        {content.cta.pricing.installments_text && (
-                                            <div className={`text-sm font-medium px-4 py-1 rounded-full bg-blue-500/10 ${themeStyles.textHighlight} inline-block`}>
-                                                {content.cta.pricing.installments_text} {content.cta.pricing.installment_value}
-                                            </div>
-                                        )}
-                                    </div>
-                                )}
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <PrimaryButton
-                                        href={content.cta?.links?.checkout}
-                                        className={`text-lg px-10 py-4 w-full md:w-auto ${themeStyles.ctaButtonShadow}`}
-                                        variant={themeStyles.buttonVariant}
-
-                                    >
-                                        COMPRAR NA KIWIFY
-                                    </PrimaryButton>
-                                    <p className="text-slate-500 text-sm flex items-center gap-2 mt-4">
-                                        <ShieldCheck className="w-4 h-4" /> Satisfação garantida ou seu dinheiro de volta.
+                        <ScrollReveal animation="fade-up" className="w-full">
+                            <div className={`backdrop-blur-xl bg-slate-900/40 border-y md:border ${themeStyles.glassCardBorder} md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl overflow-hidden`}>
+                                <div className="relative z-10">
+                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                                        Transforme seu Escritório <br /> <span className={themeStyles.textHighlight}>Ainda Hoje.</span>
+                                    </h2>
+                                    <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
+                                        Não perca mais tempo com processos manuais. Junte-se aos advogados que estão liderando o mercado com IA.
                                     </p>
+
+                                    <div className="flex justify-center mb-10 scale-90 md:scale-100">
+                                        <CountdownTimer countdownKey={countdownKey} themeStyles={themeStyles} />
+                                    </div>
+
+                                    {content.cta?.pricing && (
+                                        <div className="mb-10 text-center">
+                                            <div className="text-slate-400 line-through text-lg mb-2">{content.cta.pricing.old}</div>
+                                            <div className="flex items-center justify-center gap-2 mb-2">
+                                                <span className="text-4xl md:text-6xl font-black text-white">{content.cta.pricing.current}</span>
+                                                <span className="text-xl text-slate-400 top-0">{content.cta.pricing.cents}</span>
+                                            </div>
+                                            {content.cta.pricing.installments_text && (
+                                                <div className={`text-sm font-medium px-4 py-1 rounded-full bg-blue-500/10 ${themeStyles.textHighlight} inline-block`}>
+                                                    {content.cta.pricing.installments_text} {content.cta.pricing.installment_value}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    <div className="flex flex-col items-center gap-4">
+                                        <PrimaryButton
+                                            href={content.cta?.links?.checkout}
+                                            className={`text-lg px-10 py-4 w-full md:w-auto ${themeStyles.ctaButtonShadow}`}
+                                            variant={themeStyles.buttonVariant}
+
+                                        >
+                                            COMPRAR NA KIWIFY
+                                        </PrimaryButton>
+                                        <p className="text-slate-500 text-sm flex items-center gap-2 mt-4">
+                                            <ShieldCheck className="w-4 h-4" /> Satisfação garantida ou seu dinheiro de volta.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </Section>
 

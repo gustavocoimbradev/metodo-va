@@ -33,6 +33,28 @@
         "description": "Do zero ao avançado: um caminho estruturado para implementar a IA no seu dia a dia jurídico.",
         "cards": [
             {
+                "icon": "Cpu",
+                "title": "Gestão Orientada a IA",
+                "description": "Você vai aprender a rodar seu escritório 100% com Inteligência Artificial.",
+                "items": [
+                    "Visão 360º do escritório digital",
+                    "Eliminação de gargalos operacionais",
+                    "Integração total",
+                    "Mindset de crescimento"
+                ]
+            },
+            {
+                "icon": "Brain",
+                "title": "Elaboração de todos os documentos jurídicos",
+                "description": "Elabore documentos jurídicos com IA, sem perder a qualidade.",
+                "items": [
+                    "Petições iniciais, contestações e recursos",
+                    "Preparação de audiências e perícias",
+                    "Contratos",
+                    "Pareceres"
+                ]
+            },
+            {
                 "icon": "Brain",
                 "title": "Fundamentos da IA Generativa",
                 "description": "Entenda os conceitos base e o novo mercado jurídico com IA.",
@@ -56,13 +78,13 @@
             },
             {
                 "icon": "FileText",
-                "title": "Elaboração de Documentos",
-                "description": "Elaboração de todos os documentos jurídicos com agilidade e precisão.",
+                "title": "Revisão e Análise",
+                "description": "Use a IA para analisar contratos, peças e documentos complexos.",
                 "items": [
-                    "Petições iniciais, contestações e recursos",
-                    "Preparação de audiências e perícias",
-                    "Contratos",
-                    "Pareceres"
+                    "Análise contratual rápida",
+                    "Revisão de peças processuais",
+                    "Síntese de documentos",
+                    "Identificação de riscos"
                 ]
             },
             {
@@ -78,7 +100,7 @@
                 ]
             }
         ],
-        "bottom_quote": "\"Você vai aprender a rodar seu escritório 100% com inteligência artificial.\""
+        "bottom_quote": "\"Domine a IA ou seja dominado por quem domina.\""
     },
     "how_it_works": [
         {
