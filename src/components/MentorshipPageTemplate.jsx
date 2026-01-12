@@ -302,6 +302,7 @@ export default function MentorshipPageTemplate({
                 mentorImage={mentorImage}
                 customMessages={content.chat.custom_messages}
                 themeColor={theme.primary}
+                customBottom={showStickyCTA ? "bottom-24" : "bottom-8"}
             />
 
             {/* Background Ambience */}
