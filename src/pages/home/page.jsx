@@ -203,12 +203,12 @@ export default function HomePage() {
                             </motion.div>
                         </div>
 
-                        <div className="absolute bottom-0 right-0 h-[90vh] lg:h-[105vh] w-full lg:w-[65%] items-end justify-end pointer-events-none hidden md:flex">
+                        <div className="absolute bottom-0 right-0 h-[90vh] lg:h-[95vh] w-full lg:w-[60%] items-end justify-end pointer-events-none hidden md:flex">
                             <motion.div
                                 initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
                                 animate={isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
                                 transition={isMobile ? { duration: 0 } : { duration: 1, delay: 0.5 }}
-                                className="relative h-full w-auto right-[-5%] lg:right-[-2%] z-10 flex items-end"
+                                className="relative h-full w-auto right-0 z-10 flex items-end"
                             >
                                 <img
                                     src="/img/hero-persona.webp"
