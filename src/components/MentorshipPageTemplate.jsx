@@ -43,7 +43,17 @@ const themeConfig = {
         countdownBorder: "border-cyan-500/30",
         countdownText: "text-cyan-400",
         glassCardBg: "bg-blue-950/30",
-        glassCardBorder: "border-blue-200/5"
+        glassCardBorder: "border-blue-200/5",
+        // Deliverables specific
+        deliverablesBoxBg: "bg-[#0b1025]",
+        deliverablesBoxBorder: "border-blue-900/30",
+        deliverablesIconBorder: "border-blue-500",
+        deliverablesIconColor: "text-blue-500",
+        deliverablesCardBg: "bg-blue-900/20",
+        deliverablesCardBorder: "border-blue-800/30",
+        deliverablesCardBgHover: "hover:bg-blue-900/30",
+        deliverablesCardIconBg: "bg-blue-600/20",
+        deliverablesCardIconColor: "text-blue-400"
     },
     purple: {
         badgeBg: "bg-purple-500/10",
@@ -71,7 +81,17 @@ const themeConfig = {
         countdownBorder: "border-purple-500/30",
         countdownText: "text-purple-400",
         glassCardBg: "bg-purple-950/30",
-        glassCardBorder: "border-purple-200/5"
+        glassCardBorder: "border-purple-200/5",
+        // Deliverables specific
+        deliverablesBoxBg: "bg-[#180b25]",
+        deliverablesBoxBorder: "border-purple-900/30",
+        deliverablesIconBorder: "border-purple-500",
+        deliverablesIconColor: "text-purple-500",
+        deliverablesCardBg: "bg-purple-900/20",
+        deliverablesCardBorder: "border-purple-800/30",
+        deliverablesCardBgHover: "hover:bg-purple-900/30",
+        deliverablesCardIconBg: "bg-purple-600/20",
+        deliverablesCardIconColor: "text-purple-400"
     }
 }
 
@@ -711,10 +731,10 @@ export default function MentorshipPageTemplate({
                         <ScrollReveal animation="fade-up">
                             <div className="max-w-6xl mx-auto">
                                 {/* Prova de Autoridade Box */}
-                                <div className="bg-[#0b1025] rounded-t-2xl p-6 md:p-8 flex gap-4 border border-blue-900/30 mb-8">
+                                <div className={`${themeStyles.deliverablesBoxBg} rounded-t-2xl p-6 md:p-8 flex gap-4 border ${themeStyles.deliverablesBoxBorder} mb-8`}>
                                     <div className="shrink-0 mt-1">
-                                        <div className="w-6 h-6 rounded border border-blue-500 flex items-center justify-center">
-                                            <Check className="w-4 h-4 text-blue-500" />
+                                        <div className={`w-6 h-6 rounded border ${themeStyles.deliverablesIconBorder} flex items-center justify-center`}>
+                                            <Check className={`w-4 h-4 ${themeStyles.deliverablesIconColor}`} />
                                         </div>
                                     </div>
                                     <div>
@@ -729,8 +749,8 @@ export default function MentorshipPageTemplate({
 
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {(content.deliverables.cards || []).map((card, idx) => (
-                                        <div key={idx} className="bg-blue-900/20 border border-blue-800/30 rounded-2xl p-6 hover:bg-blue-900/30 transition-colors">
-                                            <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 mb-4">
+                                        <div key={idx} className={`${themeStyles.deliverablesCardBg} border ${themeStyles.deliverablesCardBorder} rounded-2xl p-6 ${themeStyles.deliverablesCardBgHover} transition-colors`}>
+                                            <div className={`w-10 h-10 rounded-full ${themeStyles.deliverablesCardIconBg} flex items-center justify-center ${themeStyles.deliverablesCardIconColor} mb-4`}>
                                                 {/* Dynamic Icon Rendering could go here, simplifying for now */}
                                                 {idx === 0 ? <Video className="w-5 h-5" /> : idx === 1 ? <Phone className="w-5 h-5" /> : <Target className="w-5 h-5" />}
                                             </div>
