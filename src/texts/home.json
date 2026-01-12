@@ -134,7 +134,7 @@
                 "Petições com IA"
             ],
             "button": "Saiba Mais",
-            "link": "/mentoria/inteligencia-artificial"
+            "link": "/inteligencia-artificial"
         },
         "card_jovana": {
             "badge": "Gestão & Pessoas",
@@ -148,7 +148,7 @@
                 "Crescimento Previsível"
             ],
             "button": "Saiba Mais",
-            "link": "/mentoria/gestao-de-escritorio"
+            "link": "/gestao-de-escritorio"
         }
     },
     "footer": {

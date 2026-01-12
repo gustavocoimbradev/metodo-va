@@ -1,5 +1,5 @@
-import content from '../../../texts/mentoria-ia.json'
-import MentorshipPageTemplate from '../../../components/MentorshipPageTemplate'
+import content from '../../texts/mentoria-ia.json'
+import MentorshipPageTemplate from '../../components/MentorshipPageTemplate'
 import { Brain, X, CheckCircle } from 'lucide-react'
 
 function MentoriaIA() {

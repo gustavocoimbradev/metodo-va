@@ -1,5 +1,5 @@
-import content from '../../../texts/mentoria-gestao.json'
-import MentorshipPageTemplate from '../../../components/MentorshipPageTemplate'
+import content from '../../texts/mentoria-gestao.json'
+import MentorshipPageTemplate from '../../components/MentorshipPageTemplate'
 import { Award, X, CheckCircle } from 'lucide-react'
 
 function MentoriaJovana() {
