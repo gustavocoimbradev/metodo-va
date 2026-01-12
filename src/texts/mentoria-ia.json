@@ -56,13 +56,13 @@
             },
             {
                 "icon": "FileText",
-                "title": "Revisão e Análise",
-                "description": "Use a IA para analisar contratos, peças e documentos complexos.",
+                "title": "Elaboração de Documentos",
+                "description": "Elaboração de todos os documentos jurídicos com agilidade e precisão.",
                 "items": [
-                    "Análise contratual rápida",
-                    "Revisão de peças processuais",
-                    "Síntese de documentos",
-                    "Identificação de riscos"
+                    "Petições iniciais, contestações e recursos",
+                    "Preparação de audiências e perícias",
+                    "Contratos",
+                    "Pareceres"
                 ]
             },
             {
@@ -73,11 +73,12 @@
                     "Ideias infinitas de conteúdo",
                     "Roteiros para vídeos",
                     "Artigos para blog e LinkedIn",
-                    "Adaptação de linguagem"
+                    "Adaptação de linguagem",
+                    "Atendimento de clientes e fechamento de contratos"
                 ]
             }
         ],
-        "bottom_quote": "\"Domine a IA ou seja dominado por quem domina.\""
+        "bottom_quote": "\"Você vai aprender a rodar seu escritório 100% com inteligência artificial.\""
     },
     "how_it_works": [
         {
@@ -278,7 +279,7 @@
             "secondary": "Tirar Dúvidas"
         },
         "links": {
-            "checkout": "https://pay.kiwify.com.br/placeholder"
+            "checkout": "https://pay.kiwify.com.br/h92X33n"
         },
         "secure_label": "🔒 Garantia incondicional de 7 dias"
     },

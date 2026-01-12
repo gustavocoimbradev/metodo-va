@@ -649,13 +649,13 @@ export default function MentorshipPageTemplate({
                             </h3>
                             <div className="space-y-4">
                                 {(content.audience?.not_for_you?.cards || []).map((item, idx) => (
-                                    <div key={idx} className="p-6 rounded-2xl bg-slate-900/20 border border-red-900/20 flex gap-4 opacity-80 hover:opacity-100 transition-opacity">
-                                        <div className="mt-1 shrink-0 w-8 h-8 rounded-full bg-red-900/20 flex items-center justify-center">
-                                            <X className="w-4 h-4 text-red-500" />
+                                    <div key={idx} className="p-6 rounded-2xl bg-red-950/10 border border-red-500/30 flex gap-4 hover:bg-red-950/20 transition-all">
+                                        <div className="mt-1 shrink-0 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center">
+                                            <X className="w-4 h-4 text-red-400" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-slate-300 text-lg">{item.title}</h4>
-                                            <p className="text-slate-500 text-sm mt-1">{item.desc || item.description}</p>
+                                            <h4 className="font-bold text-red-400 text-lg">{item.title}</h4>
+                                            <p className="text-red-200/70 text-sm mt-1">{item.desc || item.description}</p>
                                         </div>
                                     </div>
                                 ))}
