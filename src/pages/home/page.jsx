@@ -62,14 +62,17 @@ const GradientBlob = ({ className }) => (
     <div className={`absolute rounded-full blur-[100px] opacity-40 pointer-events-none mix-blend-screen ${className}`} />
 )
 
-const ListItem = ({ children, icon: Icon, color = "text-slate-300", active }) => (
-    <li className="flex items-start gap-4">
-        <div className={`mt-0.5 p-1 rounded-lg ${active ? 'bg-blue-500/10 text-blue-400' : 'bg-slate-800/50 text-slate-600'}`}>
-            <Icon size={18} />
-        </div>
-        <span className={`flex-1 text-base ${color}`}>{children}</span>
-    </li>
-)
+const ListItem = ({ children, icon: Icon, color = "text-slate-300", active, accent = "blue" }) => {
+    const activeClass = accent === 'red' ? 'bg-red-500/20 text-red-400' : 'bg-blue-500/10 text-blue-400';
+    return (
+        <li className="flex items-start gap-4">
+            <div className={`mt-0.5 p-1 rounded-lg ${active ? activeClass : 'bg-slate-800/50 text-slate-600'}`}>
+                <Icon size={18} />
+            </div>
+            <span className={`flex-1 text-base ${color}`}>{children}</span>
+        </li>
+    )
+}
 
 const CheckItem = ({ children, dotColor = "bg-cyan-500" }) => (
     <li className="flex items-center gap-3 text-slate-300">
@@ -447,21 +450,21 @@ export default function HomePage() {
                             </GlassCard>
                         </ScrollReveal>
                         <ScrollReveal animation="slide-right" duration={0.8} delay={0.4} className="h-full">
-                            <GlassCard className="hover:border-red-500/20 transition-all duration-500 opacity-80 h-full !bg-transparent border-dashed">
+                            <GlassCard className="hover:border-red-500/30 transition-all duration-500 h-full !bg-gradient-to-br !from-red-950/40 !to-slate-900/40">
                                 <div className="flex items-center gap-6 mb-10">
-                                    <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-400 border border-red-400/20 shadow-2xl">
+                                    <div className="w-16 h-16 rounded-2xl bg-red-500/20 flex items-center justify-center text-red-400 border border-red-400/30 shadow-2xl">
                                         <X className="w-8 h-8" />
                                     </div>
                                     <div>
-                                        <p className="text-red-400/80 text-xs font-bold uppercase tracking-widest mb-1">{content.audience.contra_indication.badge}</p>
-                                        <h3 className="text-2xl font-bold text-slate-300">{content.audience.contra_indication.title}</h3>
+                                        <p className="text-red-400 text-xs font-bold uppercase tracking-widest mb-1">{content.audience.contra_indication.badge}</p>
+                                        <h3 className="text-2xl font-bold text-white">{content.audience.contra_indication.title}</h3>
                                     </div>
                                 </div>
-                                <ul className="space-y-6 text-slate-400">
-                                    <ListItem icon={X} color="text-red-400/50">{content.audience.contra_indication.items[0]}</ListItem>
-                                    <ListItem icon={X} color="text-red-400/50">{content.audience.contra_indication.items[1]}</ListItem>
-                                    <ListItem icon={X} color="text-red-400/50">{content.audience.contra_indication.items[2]}</ListItem>
-                                    <ListItem icon={X} color="text-red-400/50">{content.audience.contra_indication.items[3]}</ListItem>
+                                <ul className="space-y-6">
+                                    <ListItem icon={X} active accent="red">{content.audience.contra_indication.items[0]}</ListItem>
+                                    <ListItem icon={X} active accent="red">{content.audience.contra_indication.items[1]}</ListItem>
+                                    <ListItem icon={X} active accent="red">{content.audience.contra_indication.items[2]}</ListItem>
+                                    <ListItem icon={X} active accent="red">{content.audience.contra_indication.items[3]}</ListItem>
                                 </ul>
                             </GlassCard>
                         </ScrollReveal>
