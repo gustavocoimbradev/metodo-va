@@ -217,7 +217,7 @@ export const FloatingChatWidget = ({
                             <a
                                 href="https://wa.me/553592083300"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer "
                                 className={`flex items-center justify-center gap-2 w-full py-3 ${themeButton} rounded-xl text-white font-bold transition-all shadow-lg group`}
                             >
                                 <span>{defaultChatContent.ui.cta_button}</span>
