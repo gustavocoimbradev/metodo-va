@@ -215,7 +215,7 @@ export const FloatingChatWidget = ({
                         {/* Action Footer */}
                         <div className="p-4 bg-slate-900 border-t border-white/5">
                             <a
-                                href="https://wa.me/5535920833300"
+                                href="https://wa.me/5535992083300"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`flex items-center justify-center gap-2 w-full py-3 ${themeButton} rounded-xl text-white font-bold transition-all shadow-lg group`}
